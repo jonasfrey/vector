@@ -135,15 +135,35 @@ o_s_name_fun_f.fract = function(){
         })
     );
 }
-o_s_name_fun_f.componentsum = function(){
-    return this.a_o_comp.reduce((o_prev, o_curr)=>{
-        o_prev+=o_curr.value
-        return o_prev
+o_s_name_fun_f.componentsadded = function(){
+    return this.a_o_comp.reduce((n_prev, o_curr)=>{
+        n_prev+=o_curr.value
+        return n_prev
     }, 0)
+}
+o_s_name_fun_f.componentssubtracted = function(){
+    return this.a_o_comp.reduce((n_prev, o_curr)=>{
+        n_prev-=o_curr.value
+        return n_prev
+    }, 0)
+}
+o_s_name_fun_f.componentsmultiplied = function(){
+    let n = 1;
+    for(let n_idx = 1; n_idx < this.a_o_comp.length; n_idx+=1){
+        n*=this.a_o_comp[n_idx].value;
+    }
+    return n
+}
+o_s_name_fun_f.componentsdivided = function(){
+    let n = 1;
+    for(let n_idx = 1; n_idx < this.a_o_comp.length; n_idx+=1){
+        n/=this.a_o_comp[n_idx].value;
+    }
+    return n
 }
 o_s_name_fun_f.dot = function(){
     let o_new = this.multiply(...arguments);
-    return o_new.componentsum();
+    return o_new.componentsadded();
 }
 o_s_name_fun_f.cross = function(){
     let o_vec_for_op = arguments[0];

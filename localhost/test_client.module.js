@@ -144,11 +144,17 @@ await f_deno_test_all_and_print_summary(
             //readme.md:end
 
         }),
-        f_deno_test("componentsum", () => {
+        f_deno_test("component operations", () => {
             //readme.md:start
-            //md: ### dot / dot product
-            let n = f_o_vec3(1,2,3).componentsum()
+            //md: ### components added
+            var n = f_o_vec3(1,2,3).componentsadded()
             f_assert_equals(n,6)//`1+2+3
+            var n = f_o_vec3(1,2,3).componentssubtracted()
+            f_assert_equals(n,-6)//`-1-2-3
+            var n = f_o_vec3(1,2,3).componentsmultiplied()
+            f_assert_equals(n,6)//`1*2*3
+            var n = f_o_vec3(1,2,3).componentsdivided()
+            f_assert_equals(n,0.16666666666666666)//`(1/2)/3
             //readme.md:end
         }),
         f_deno_test("dot", () => {
