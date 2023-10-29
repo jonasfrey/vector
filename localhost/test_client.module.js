@@ -146,7 +146,7 @@ await f_deno_test_all_and_print_summary(
         }),
         f_deno_test("component operations", () => {
             //readme.md:start
-            //md: ### components added
+            //md: ### components operated on each other
             var n = f_o_vec3(1,2,3).componentsadded()
             f_assert_equals(n,6)//`1+2+3
             var n = f_o_vec3(1,2,3).componentssubtracted()

@@ -1,4 +1,4 @@
-<!-- {"s_msg":"this file was automatically generated","s_by":"f_generate_markdown.module.js","s_ts_created":"Sun Oct 29 2023 23:28:13 GMT+0100 (Central European Standard Time)","n_ts_created":1698618493964} -->
+<!-- {"s_msg":"this file was automatically generated","s_by":"f_generate_markdown.module.js","s_ts_created":"Sun Oct 29 2023 23:45:03 GMT+0100 (Central European Standard Time)","n_ts_created":1698619503513} -->
 ![f_o_vec logo](./f_o_vec_library.png)
 # f_o_vec
 this is a small library that handles vectors in javascript, at least as good as it can be done UwU
@@ -101,10 +101,16 @@ unfortunately there is no pythagorean quituple
             o.fracteq()
             f_assert_equals(o.toString(),`(0.8291214,0.5534)`)
 ```
-### dot / dot product
+### components added
 ```javascript
-            let n = f_o_vec3(1,2,3).componentsum()
+            var n = f_o_vec3(1,2,3).componentsadded()
             f_assert_equals(n,6)//`1+2+3
+            var n = f_o_vec3(1,2,3).componentssubtracted()
+            f_assert_equals(n,-6)//`-1-2-3
+            var n = f_o_vec3(1,2,3).componentsmultiplied()
+            f_assert_equals(n,6)//`1*2*3
+            var n = f_o_vec3(1,2,3).componentsdivided()
+            f_assert_equals(n,0.16666666666666666)//`(1/2)/3
 ```
 ### dot / dot product
 ```javascript
