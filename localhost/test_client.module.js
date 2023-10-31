@@ -58,6 +58,11 @@ await f_deno_test_all_and_print_summary(
             f_assert_equals(o.n_w, 5)
             f_assert_equals(o[3], 5)
 
+            //md: ## access components as array of numbers a_n_comp
+            f_assert_equals(o.a_n_comp, [2,3,4,5])
+            f_assert_equals(o.components, [2,3,4,5])
+            f_assert_equals(o.a_o_comp.map(o=>o.value), [2,3,4,5])
+
             //set components
             var o = f_o_vec4(0);
             f_assert_equals(o.x+=1, 1)
@@ -97,16 +102,19 @@ await f_deno_test_all_and_print_summary(
             //readme.md:end
         }),
         f_deno_test("vector operations: subtract", () => {
+            //readme.md:start
             //md: ### subtract
             f_assert_equals(f_o_vec2(5,5).subtract(2,-2).toString(),'(3,7)')
             //readme.md:end
         }),
         f_deno_test("vector operations: multiply", () => {
+            //readme.md:start
             //md: ### multiply
             f_assert_equals(f_o_vec2(1,1).multiply(2,3).toString(),'(2,3)')
             //readme.md:end
         }),
         f_deno_test("vector operations: divide", () => {
+            //readme.md:start
             //md: ### multiply
             f_assert_equals(f_o_vec2(4,3).divide(2,3).toString(),`(2,1)`)
             //readme.md:end
@@ -172,7 +180,6 @@ await f_deno_test_all_and_print_summary(
             //md: ### dot / dot product
             var o = f_o_vec3(2,3,4).cross(5,6,7)
             f_assert_equals(o.toString(),'(-3,6,-3)')
-            // readme.md:end
             var o = f_o_vec3(2,3,4);
             o.crosseq(5,6,7)
             f_assert_equals(o.toString(),'(-3,6,-3)')
@@ -181,23 +188,20 @@ await f_deno_test_all_and_print_summary(
             f_assert_equals(o.toString(),'(-1,2,-1)')
             //readme.md:end
         }),
-        f_deno_test("angle", () => {
+        f_deno_test("sangle", () => {
             //readme.md:start
-            //md: ### angle between two vectors
-            var n_ang = f_o_vec3(2,3,4).angle(-5,6,-7)
+            //md: ### sangle (smallest angle) between two vectors using the (dot/length*length) formula
+            var n_ang = f_o_vec3(2,3,4).sangle(-5,6,-7)
             f_assert_equals(n_ang,1.9327554742236706)
-            var n_ang_deg = f_o_vec3(2,3,4).angle_deg(-5,6,-7)
+            var n_ang_deg = f_o_vec3(2,3,4).sangle_deg(-5,6,-7)
             f_assert_equals(n_ang_deg,110.73873150382231)
             //readme.md:end
+        }),
+        f_deno_test("hangle", () => {
+            //md: ### the horizontal angle between two vectors
+            // f_assert_equals(f_o_vec2(0,1).hangle(0,1),0);
+
         }),
         
     ]
 )
-
-
-
-
-
-// //md: ## access vector components
-// var o = f_o_vec4(2,3,4,5);
-// console.log(o.x)

@@ -91,7 +91,7 @@ let f_o_vec2__operated = function(
 window.o_s_name_fun_f = {}
 
 o_s_name_fun_f.add = function(){
-    console.log('add call')
+    // console.log('add call')
     return f_o_vec2__operated(
         (value, n2)=>{return value+n2}, 
         this.a_o_comp.map(o=>o.value),
@@ -195,7 +195,8 @@ o_s_name_fun_f.cross = function(){
     let o_vres = o_vec_a.multiply(o_vec_b).subtract(o_vec_c.multiply(o_vec_d))
     return o_vres
 }
-o_s_name_fun_f.angle = function(){
+o_s_name_fun_f.sangle = function(){
+    //sangle => smallest angle, this will return only a angle from 0 up to 180 degrees
     let o_vec_for_op = arguments[0];
     if(
         (arguments.length == this.a_o_comp.length || arguments.length == 1)
@@ -204,13 +205,33 @@ o_s_name_fun_f.angle = function(){
     ){
         o_vec_for_op = f_o_vec_n(this.a_o_comp.length, ...arguments)
     }
-    let n_acos = (this.dot(o_vec_for_op))/(this.length()*o_vec_for_op.length())
+    let n_acos = (this.dot(o_vec_for_op))/(this.length()*(o_vec_for_op.length()))
     return Math.acos(n_acos);
 }
-
-o_s_name_fun_f.angle_deg = function(){
-    return ((this.angle(...arguments)/(Math.PI * 2))*360)
+o_s_name_fun_f.hangle = function(){
+    let o_vec_for_op = arguments[0];
+    if(
+        (arguments.length == this.a_o_comp.length || arguments.length == 1)
+        && 
+        Array.from(arguments).filter(v=>typeof v != 'number').length == 0
+    ){
+        o_vec_for_op = f_o_vec_n(this.a_o_comp.length, ...arguments)
+    }
+    return Math.PI-Math.atan2(...this.subtract(o_vec_for_op).f_a_n_comp())
 }
+
+
+// functions that can be called with name_deg to get degrees
+let a_s_name_degreeable = [
+    'sangle', 
+    'hangle'
+];
+for(let s_name_degreeable of a_s_name_degreeable){
+    o_s_name_fun_f[`${s_name_degreeable}_deg`] = function(){
+        return ((this[s_name_degreeable](...arguments)/(Math.PI * 2))*360)
+    }
+}
+
 
 //     // 'invert': function(a_o_comp){
 
@@ -279,11 +300,22 @@ let f_n_idx_a_o_comp__from_s_name_prop = function(s_name_prop){
 class O_vec{
     constructor(a_o_comp){
         this.a_o_comp = a_o_comp
+
+        this.a_s_prop_to_function_prefix = [
+            'a_n_comp',
+            'components'
+        ]
+
         return new Proxy(
             this, 
             {
                 get:function(o_target, s_prop, o_receiver){
                     
+
+                    if(o_target.a_s_prop_to_function_prefix.includes(s_prop)){
+                        return Reflect.get(o_target, `f_${s_prop}`, o_receiver).apply(o_target, arguments)
+                    }
+
                     let n_idx_a_o_comp = f_n_idx_a_o_comp__from_s_name_prop(s_prop);
 
                     if(n_idx_a_o_comp != null){
@@ -326,10 +358,18 @@ class O_vec{
                   },
             }
         )
+
     }
     toString(){
         return `(${this.a_o_comp.map(o=>o.value).join(',')})`    
     }
+    f_a_n_comp(){
+        return this.a_o_comp.map(o=>o.value)
+    }
+    f_components(){
+        return this.f_a_n_comp()
+    }
+    
 
 
 }

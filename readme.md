@@ -1,4 +1,4 @@
-<!-- {"s_msg":"this file was automatically generated","s_by":"f_generate_markdown.module.js","s_ts_created":"Sun Oct 29 2023 23:45:03 GMT+0100 (Central European Standard Time)","n_ts_created":1698619503513} -->
+<!-- {"s_msg":"this file was automatically generated","s_by":"f_generate_markdown.module.js","s_ts_created":"Tue Oct 31 2023 17:22:58 GMT+0100 (Central European Standard Time)","n_ts_created":1698769378579} -->
 ![f_o_vec logo](./f_o_vec_library.png)
 # f_o_vec
 this is a small library that handles vectors in javascript, at least as good as it can be done UwU
@@ -35,6 +35,13 @@ this is a small library that handles vectors in javascript, at least as good as 
             f_assert_equals(o.w, 5)
             f_assert_equals(o.n_w, 5)
             f_assert_equals(o[3], 5)
+
+```
+## access components as array of numbers a_n_comp
+```javascript
+            f_assert_equals(o.a_n_comp, [2,3,4,5])
+            f_assert_equals(o.components, [2,3,4,5])
+            f_assert_equals(o.a_o_comp.map(o=>o.value), [2,3,4,5])
 
             //set components
             var o = f_o_vec4(0);
@@ -76,6 +83,18 @@ the vector gets changed in place
             f_assert_equals(o.toString(),'(1,2)')// since we just called 'add', the vector is the same but 'add' returned a new vector
             o.addeq(2,1)// the vector has now been changed/updated
             f_assert_equals(o.toString(),'(3,3)')
+```
+### subtract
+```javascript
+            f_assert_equals(f_o_vec2(5,5).subtract(2,-2).toString(),'(3,7)')
+```
+### multiply
+```javascript
+            f_assert_equals(f_o_vec2(1,1).multiply(2,3).toString(),'(2,3)')
+```
+### multiply
+```javascript
+            f_assert_equals(f_o_vec2(4,3).divide(2,3).toString(),`(2,1)`)
             // md: ## other manipulations
 
 ```
@@ -101,7 +120,7 @@ unfortunately there is no pythagorean quituple
             o.fracteq()
             f_assert_equals(o.toString(),`(0.8291214,0.5534)`)
 ```
-### components added
+### components operated on each other
 ```javascript
             var n = f_o_vec3(1,2,3).componentsadded()
             f_assert_equals(n,6)//`1+2+3
@@ -131,10 +150,10 @@ unfortunately there is no pythagorean quituple
             o.crosseq(1)
             f_assert_equals(o.toString(),'(-1,2,-1)')
 ```
-### angle between two vectors
+### sangle (smallest angle) between two vectors using the (dot/length*length) formula
 ```javascript
-            var n_ang = f_o_vec3(2,3,4).angle(-5,6,-7)
+            var n_ang = f_o_vec3(2,3,4).sangle(-5,6,-7)
             f_assert_equals(n_ang,1.9327554742236706)
-            var n_ang_deg = f_o_vec3(2,3,4).angle_deg(-5,6,-7)
+            var n_ang_deg = f_o_vec3(2,3,4).sangle_deg(-5,6,-7)
             f_assert_equals(n_ang_deg,110.73873150382231)
 ```

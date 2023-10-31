@@ -67,24 +67,31 @@ let f_render = function(o_ctx){
     let n_ms_diff = (Math.abs(n_ms_now - o_state.n_ms_last))
     // console.log(n_ms_diff)
     if(n_ms_diff > (1000/o_state.n_fps)){
-        console.log('f_render')
+        // console.log('f_render')
         // console.log(o_state.n_id__raf)
         // o_state.o_ctx.clearRect(0, 0, o_state.o_canvas.width, o_state.o_canvas.height);
-        o_state.o_ctx.fillStyle = "rgba(0.1,0.1,0.1,0.2)";
+        o_state.o_ctx.fillStyle = `rgba(0.1,0.1,0.1,${(o_state.b_mousedown) ? '0.06': '0.33'})`;
 
         o_state.o_ctx?.fillRect(0, 0, o_state.o_canvas.width, o_state.o_canvas.height);
         let n_dist = f_o_vec2(o_state.o_trn__mouse-o_state.o_trn__ship).length();
         let o_trn__ship_new = o_state.o_trn__mouse.add(
             (o_state.o_trn__ship.subtract(o_state.o_trn__mouse)).multiply(0.95-((o_state.b_mousedown)?0.12:0))
         )
-        // let n_ang_rad = f_o_vec2(o_trn__ship_new).angle(o_state.o_trn__mouse);
-        let o_diff = o_state.o_trn__ship.subtract(o_state.o_trn__mouse)
-        let n_ang_rad = Math.atan2(o_diff.y,o_diff.x)+(Math.PI/2)
         o_state.o_trn__ship = o_trn__ship_new
-        console.log(o_state.o_trn__ship)
+        let o_diff = o_state.o_trn__ship.subtract(o_state.o_trn__mouse)
+        // let n_ang_rad = Math.atan2(o_diff.y,o_diff.x)+(Math.PI/2)
+        let n_ang_rad = o_state.o_trn__ship.hangle(o_state.o_trn__mouse)
+        // console.log(o_state.o_trn__ship)
 
         o_state.o_ctx.fillStyle = "rgba(222,222,222,0.8)";
-        f_draw_polygon(o_state.o_ctx, parseInt((Math.sin(o_state.n_id__raf*0.05)*.5+.5)*3+3), 20, n_ang_rad, o_state.o_trn__ship);
+        let n_corners = 3;
+        let n_radius = 20;
+        if(o_state.b_mousedown){
+            n_corners = parseInt((Math.sin(o_state.n_id__raf*0.2)*.5+.5)*3+3) 
+            n_radius = (Math.sin(o_state.n_id__raf*0.5)*.5+.5)*12+12
+        }
+        f_draw_polygon(o_state.o_ctx, n_corners, n_radius, n_ang_rad, o_state.o_trn__ship
+        );
         // f_draw_polygon(o_state.o_ctx, parseInt((Math.sin(o_state.n_id__raf*0.05)*.5+.5)*6+3), 20, 0, o_state.o_trn__mouse);
         o_state.n_ms_last = n_ms_now
     }
@@ -108,5 +115,5 @@ window.onmousemove = function(o_e){
         o_e.clientX,
         o_e.clientY
     )
-    console.log(o_state.o_trn__mouse.toString())
+    // console.log(o_state.o_trn__mouse.toString())
 }
