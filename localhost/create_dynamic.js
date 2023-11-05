@@ -66,6 +66,7 @@ let a_o_vec_function = [
                                             return `this.${a_s_name_component[0]} ${o.s_operator} o_vec.${a_s_name_component[0]}`
                                         }
                                     ).join('\n')}
+                                    return this
                                     `
                                 }
                             })()}
@@ -164,6 +165,7 @@ let a_o_vec_function = [
                         return `this.${a_s_name_component[0]} = this.${a_s_name_component[0]} / n_length`
                     }
                 ).join('\n')}
+                return this
             }
 
             `
@@ -197,6 +199,7 @@ let a_o_vec_function = [
                         return `this.${a_s_name_component[0]} = this.${a_s_name_component[0]} % 1`
                     }
                 ).join('\n')}
+                return this
             }
 
             `
@@ -224,7 +227,7 @@ let a_o_vec_function = [
             function(v){
                 const o_vec = (typeof v == 'number') ? new ${o_vec_class.s_name}(...arguments) : v
                 let o_vec_diff = this.sub(o_vec);
-                return Math.PI-Math.atan2(
+                return Math.atan2(
                     o_vec_diff.${o_vec_class.a_a_s_name_component[0][0]},
                     o_vec_diff.${o_vec_class.a_a_s_name_component[1][0]}
                 )
@@ -234,50 +237,78 @@ let a_o_vec_function = [
         },
         true
     ),
-    new O_vec_funtion(
-        ['cross', 'crossproduct'], 
-        function(o_vec_class){
-            return `
-            function(v){
-                const o_vec = (typeof v == 'number') ? new ${o_vec_class.s_name}(...arguments) : v
-
-                const o_vec_a = new ${o_vec_class.s_name}(
-                    ${o_vec_class.a_a_s_name_component.map(
-                        (v, n_idx)=>{
-                            n_idx = (n_idx+1)%o_vec_class.n_dimensions
-                            return `this.${o_vec_class.a_a_s_name_component[n_idx][0]}`
+    ...[0,1].map(
+        (n)=>{
+            return new O_vec_funtion(
+                [`cross${(n == 0) ? '' : 'eq'}`, `crossproduct${(n == 0) ? '' : 'eq'}` ], 
+                function(o_vec_class){
+                    return `
+                    function(v){
+                        const o_vec = (typeof v == 'number') ? new ${o_vec_class.s_name}(...arguments) : v
+        
+                        const o_vec_a = new ${o_vec_class.s_name}(
+                            ${o_vec_class.a_a_s_name_component.map(
+                                (v, n_idx)=>{
+                                    n_idx = (n_idx+1)%o_vec_class.n_dimensions
+                                    return `this.${o_vec_class.a_a_s_name_component[n_idx][0]}`
+                                }
+                            ).join(',')}
+                        )
+                        const o_vec_b = new ${o_vec_class.s_name}(
+                            ${o_vec_class.a_a_s_name_component.map(
+                                (v, n_idx)=>{
+                                    n_idx = (n_idx+2)%o_vec_class.n_dimensions
+                                    return `o_vec.${o_vec_class.a_a_s_name_component[n_idx][0]}`
+                                }
+                            ).join(',')}
+                        )
+                        const o_vec_c = new ${o_vec_class.s_name}(
+                            ${o_vec_class.a_a_s_name_component.map(
+                                (v, n_idx)=>{
+                                    n_idx = (n_idx+2)%o_vec_class.n_dimensions
+                                    return `this.${o_vec_class.a_a_s_name_component[n_idx][0]}`
+                                }
+                            ).join(',')}
+                        )
+                        const o_vec_d = new ${o_vec_class.s_name}(
+                            ${o_vec_class.a_a_s_name_component.map(
+                                (v, n_idx)=>{
+                                    n_idx = (n_idx+1)%o_vec_class.n_dimensions
+                                    return `o_vec.${o_vec_class.a_a_s_name_component[n_idx][0]}`
+                                }
+                            ).join(',')}
+                        )
+                        ${
+                            (()=>{
+                                if(n == 0){
+                                    return `
+                                    return new ${o_vec_class.s_name}(
+                                    ${o_vec_class.a_a_s_name_component.map(
+                                        a_s_name_component =>{
+                                            return `this.${a_s_name_component[0]} = o_vec_a.${a_s_name_component[0]} * o_vec_b.${a_s_name_component[0]} - o_vec_c.${a_s_name_component[0]} * o_vec_d.${a_s_name_component[0]}`
+                                        }
+                                    ).join(',\n')}
+                                    )
+                                    `
+                                }else{
+                                    return `
+                                    ${o_vec_class.a_a_s_name_component.map(
+                                        a_s_name_component =>{
+                                            return `this.${a_s_name_component[0]} = o_vec_a.${a_s_name_component[0]} * o_vec_b.${a_s_name_component[0]} - o_vec_c.${a_s_name_component[0]} * o_vec_d.${a_s_name_component[0]}`
+                                        }
+                                    ).join(',\n')}
+                                    return this
+                                    `
+                                }
+                            })()
                         }
-                    ).join(',')}
-                )
-                const o_vec_b = new ${o_vec_class.s_name}(
-                    ${o_vec_class.a_a_s_name_component.map(
-                        (v, n_idx)=>{
-                            n_idx = (n_idx+2)%o_vec_class.n_dimensions
-                            return `o_vec.${o_vec_class.a_a_s_name_component[n_idx][0]}`
-                        }
-                    ).join(',')}
-                )
-                const o_vec_c = new ${o_vec_class.s_name}(
-                    ${o_vec_class.a_a_s_name_component.map(
-                        (v, n_idx)=>{
-                            n_idx = (n_idx+2)%o_vec_class.n_dimensions
-                            return `this.${o_vec_class.a_a_s_name_component[n_idx][0]}`
-                        }
-                    ).join(',')}
-                )
-                const o_vec_d = new ${o_vec_class.s_name}(
-                    ${o_vec_class.a_a_s_name_component.map(
-                        (v, n_idx)=>{
-                            n_idx = (n_idx+1)%o_vec_class.n_dimensions
-                            return `o_vec.${o_vec_class.a_a_s_name_component[n_idx][0]}`
-                        }
-                    ).join(',')}
-                )
-                return o_vec_a.multiply(o_vec_b).subtract(o_vec_c.multiply(o_vec_d))
-            }
-
-            `
-        } 
+                    }
+        
+                    `
+                } 
+            )
+            
+        }
     )
 
 
@@ -417,9 +448,9 @@ ${a_o_vec_function.map(o_vec_function=>{
     }).join('\n')}
     ${(()=>{
         if(o_vec_function.b_has_to_degrees_function){
-            return o_vec_function.a_s_name.slice(1).map(s_name=>{
+            return o_vec_function.a_s_name.slice(0).map(s_name=>{
                 return `${o_vec_class.s_name}.prototype.${s_name}_deg = function(){
-                    (${o_vec_class.s_name}.n_tau / ${o_vec_class.s_name}.prototype.${s_name_main}(...arguments))*360
+                    return (${o_vec_class.s_name}.prototype.${s_name_main}.call(this,...arguments)/${o_vec_class.s_name}.n_tau)*360
                 }`
             }).join('\n')
         }

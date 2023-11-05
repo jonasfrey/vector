@@ -102,6 +102,7 @@ this.n_y + o_vec.n_y
                             
                                     this.n_x += o_vec.n_x
 this.n_y += o_vec.n_y
+                                    return this
                                     
 
                         }
@@ -132,6 +133,7 @@ this.n_y - o_vec.n_y
                             
                                     this.n_x -= o_vec.n_x
 this.n_y -= o_vec.n_y
+                                    return this
                                     
 
                         }
@@ -162,6 +164,7 @@ this.n_y * o_vec.n_y
                             
                                     this.n_x *= o_vec.n_x
 this.n_y *= o_vec.n_y
+                                    return this
                                     
 
                         }
@@ -192,6 +195,7 @@ this.n_y / o_vec.n_y
                             
                                     this.n_x /= o_vec.n_x
 this.n_y /= o_vec.n_y
+                                    return this
                                     
 
                         }
@@ -285,6 +289,7 @@ this.n_y * o_vec.n_y
                 const n_length = this.length();
                 this.n_x = this.n_x / n_length
 this.n_y = this.n_y / n_length
+                return this
             }
 
             
@@ -309,6 +314,7 @@ this.n_y = this.n_y / n_length
             function(){
                 this.n_x = this.n_x % 1
 this.n_y = this.n_y % 1
+                return this
             }
 
             
@@ -327,11 +333,14 @@ this.n_y = this.n_y % 1
             
     O_vec2.prototype.smallestangle = O_vec2.prototype.sangle
 O_vec2.prototype.shortestangle = O_vec2.prototype.sangle
-    O_vec2.prototype.smallestangle_deg = function(){
-                    (O_vec2.n_tau / O_vec2.prototype.sangle(...arguments))*360
+    O_vec2.prototype.sangle_deg = function(){
+                    return (O_vec2.prototype.sangle.call(this,...arguments)/O_vec2.n_tau)*360
+                }
+O_vec2.prototype.smallestangle_deg = function(){
+                    return (O_vec2.prototype.sangle.call(this,...arguments)/O_vec2.n_tau)*360
                 }
 O_vec2.prototype.shortestangle_deg = function(){
-                    (O_vec2.n_tau / O_vec2.prototype.sangle(...arguments))*360
+                    return (O_vec2.prototype.sangle.call(this,...arguments)/O_vec2.n_tau)*360
                 }
     
 
@@ -339,7 +348,7 @@ O_vec2.prototype.shortestangle_deg = function(){
             function(v){
                 const o_vec = (typeof v == 'number') ? new O_vec2(...arguments) : v
                 let o_vec_diff = this.sub(o_vec);
-                return Math.PI-Math.atan2(
+                return Math.atan2(
                     o_vec_diff.n_x,
                     o_vec_diff.n_y
                 )
@@ -347,32 +356,68 @@ O_vec2.prototype.shortestangle_deg = function(){
 
             
     O_vec2.prototype.horizontalangle = O_vec2.prototype.hangle
-    O_vec2.prototype.horizontalangle_deg = function(){
-                    (O_vec2.n_tau / O_vec2.prototype.hangle(...arguments))*360
+    O_vec2.prototype.hangle_deg = function(){
+                    return (O_vec2.prototype.hangle.call(this,...arguments)/O_vec2.n_tau)*360
+                }
+O_vec2.prototype.horizontalangle_deg = function(){
+                    return (O_vec2.prototype.hangle.call(this,...arguments)/O_vec2.n_tau)*360
                 }
     
 
     O_vec2.prototype.cross = 
-            function(v){
-                const o_vec = (typeof v == 'number') ? new O_vec2(...arguments) : v
-
-                const o_vec_a = new O_vec2(
-                    this.n_y,this.n_x
-                )
-                const o_vec_b = new O_vec2(
-                    o_vec.n_x,o_vec.n_y
-                )
-                const o_vec_c = new O_vec2(
-                    this.n_x,this.n_y
-                )
-                const o_vec_d = new O_vec2(
-                    o_vec.n_y,o_vec.n_x
-                )
-                return o_vec_a.multiply(o_vec_b).subtract(o_vec_c.multiply(o_vec_d))
-            }
-
-            
+                    function(v){
+                        const o_vec = (typeof v == 'number') ? new O_vec2(...arguments) : v
+        
+                        const o_vec_a = new O_vec2(
+                            this.n_y,this.n_x
+                        )
+                        const o_vec_b = new O_vec2(
+                            o_vec.n_x,o_vec.n_y
+                        )
+                        const o_vec_c = new O_vec2(
+                            this.n_x,this.n_y
+                        )
+                        const o_vec_d = new O_vec2(
+                            o_vec.n_y,o_vec.n_x
+                        )
+                        
+                                    return new O_vec2(
+                                    this.n_x = o_vec_a.n_x * o_vec_b.n_x - o_vec_c.n_x * o_vec_d.n_x,
+this.n_y = o_vec_a.n_y * o_vec_b.n_y - o_vec_c.n_y * o_vec_d.n_y
+                                    )
+                                    
+                    }
+        
+                    
     O_vec2.prototype.crossproduct = O_vec2.prototype.cross
+    
+    
+
+    O_vec2.prototype.crosseq = 
+                    function(v){
+                        const o_vec = (typeof v == 'number') ? new O_vec2(...arguments) : v
+        
+                        const o_vec_a = new O_vec2(
+                            this.n_y,this.n_x
+                        )
+                        const o_vec_b = new O_vec2(
+                            o_vec.n_x,o_vec.n_y
+                        )
+                        const o_vec_c = new O_vec2(
+                            this.n_x,this.n_y
+                        )
+                        const o_vec_d = new O_vec2(
+                            o_vec.n_y,o_vec.n_x
+                        )
+                        
+                                    this.n_x = o_vec_a.n_x * o_vec_b.n_x - o_vec_c.n_x * o_vec_d.n_x,
+this.n_y = o_vec_a.n_y * o_vec_b.n_y - o_vec_c.n_y * o_vec_d.n_y
+                                    return this
+                                    
+                    }
+        
+                    
+    O_vec2.prototype.crossproducteq = O_vec2.prototype.crosseq
     
     
 
@@ -621,6 +666,7 @@ this.n_z + o_vec.n_z
                                     this.n_x += o_vec.n_x
 this.n_y += o_vec.n_y
 this.n_z += o_vec.n_z
+                                    return this
                                     
 
                         }
@@ -653,6 +699,7 @@ this.n_z - o_vec.n_z
                                     this.n_x -= o_vec.n_x
 this.n_y -= o_vec.n_y
 this.n_z -= o_vec.n_z
+                                    return this
                                     
 
                         }
@@ -685,6 +732,7 @@ this.n_z * o_vec.n_z
                                     this.n_x *= o_vec.n_x
 this.n_y *= o_vec.n_y
 this.n_z *= o_vec.n_z
+                                    return this
                                     
 
                         }
@@ -717,6 +765,7 @@ this.n_z / o_vec.n_z
                                     this.n_x /= o_vec.n_x
 this.n_y /= o_vec.n_y
 this.n_z /= o_vec.n_z
+                                    return this
                                     
 
                         }
@@ -816,6 +865,7 @@ this.n_z * o_vec.n_z
                 this.n_x = this.n_x / n_length
 this.n_y = this.n_y / n_length
 this.n_z = this.n_z / n_length
+                return this
             }
 
             
@@ -841,6 +891,7 @@ this.n_z = this.n_z / n_length
                 this.n_x = this.n_x % 1
 this.n_y = this.n_y % 1
 this.n_z = this.n_z % 1
+                return this
             }
 
             
@@ -859,11 +910,14 @@ this.n_z = this.n_z % 1
             
     O_vec3.prototype.smallestangle = O_vec3.prototype.sangle
 O_vec3.prototype.shortestangle = O_vec3.prototype.sangle
-    O_vec3.prototype.smallestangle_deg = function(){
-                    (O_vec3.n_tau / O_vec3.prototype.sangle(...arguments))*360
+    O_vec3.prototype.sangle_deg = function(){
+                    return (O_vec3.prototype.sangle.call(this,...arguments)/O_vec3.n_tau)*360
+                }
+O_vec3.prototype.smallestangle_deg = function(){
+                    return (O_vec3.prototype.sangle.call(this,...arguments)/O_vec3.n_tau)*360
                 }
 O_vec3.prototype.shortestangle_deg = function(){
-                    (O_vec3.n_tau / O_vec3.prototype.sangle(...arguments))*360
+                    return (O_vec3.prototype.sangle.call(this,...arguments)/O_vec3.n_tau)*360
                 }
     
 
@@ -871,7 +925,7 @@ O_vec3.prototype.shortestangle_deg = function(){
             function(v){
                 const o_vec = (typeof v == 'number') ? new O_vec3(...arguments) : v
                 let o_vec_diff = this.sub(o_vec);
-                return Math.PI-Math.atan2(
+                return Math.atan2(
                     o_vec_diff.n_x,
                     o_vec_diff.n_y
                 )
@@ -879,32 +933,70 @@ O_vec3.prototype.shortestangle_deg = function(){
 
             
     O_vec3.prototype.horizontalangle = O_vec3.prototype.hangle
-    O_vec3.prototype.horizontalangle_deg = function(){
-                    (O_vec3.n_tau / O_vec3.prototype.hangle(...arguments))*360
+    O_vec3.prototype.hangle_deg = function(){
+                    return (O_vec3.prototype.hangle.call(this,...arguments)/O_vec3.n_tau)*360
+                }
+O_vec3.prototype.horizontalangle_deg = function(){
+                    return (O_vec3.prototype.hangle.call(this,...arguments)/O_vec3.n_tau)*360
                 }
     
 
     O_vec3.prototype.cross = 
-            function(v){
-                const o_vec = (typeof v == 'number') ? new O_vec3(...arguments) : v
-
-                const o_vec_a = new O_vec3(
-                    this.n_y,this.n_z,this.n_x
-                )
-                const o_vec_b = new O_vec3(
-                    o_vec.n_z,o_vec.n_x,o_vec.n_y
-                )
-                const o_vec_c = new O_vec3(
-                    this.n_z,this.n_x,this.n_y
-                )
-                const o_vec_d = new O_vec3(
-                    o_vec.n_y,o_vec.n_z,o_vec.n_x
-                )
-                return o_vec_a.multiply(o_vec_b).subtract(o_vec_c.multiply(o_vec_d))
-            }
-
-            
+                    function(v){
+                        const o_vec = (typeof v == 'number') ? new O_vec3(...arguments) : v
+        
+                        const o_vec_a = new O_vec3(
+                            this.n_y,this.n_z,this.n_x
+                        )
+                        const o_vec_b = new O_vec3(
+                            o_vec.n_z,o_vec.n_x,o_vec.n_y
+                        )
+                        const o_vec_c = new O_vec3(
+                            this.n_z,this.n_x,this.n_y
+                        )
+                        const o_vec_d = new O_vec3(
+                            o_vec.n_y,o_vec.n_z,o_vec.n_x
+                        )
+                        
+                                    return new O_vec3(
+                                    this.n_x = o_vec_a.n_x * o_vec_b.n_x - o_vec_c.n_x * o_vec_d.n_x,
+this.n_y = o_vec_a.n_y * o_vec_b.n_y - o_vec_c.n_y * o_vec_d.n_y,
+this.n_z = o_vec_a.n_z * o_vec_b.n_z - o_vec_c.n_z * o_vec_d.n_z
+                                    )
+                                    
+                    }
+        
+                    
     O_vec3.prototype.crossproduct = O_vec3.prototype.cross
+    
+    
+
+    O_vec3.prototype.crosseq = 
+                    function(v){
+                        const o_vec = (typeof v == 'number') ? new O_vec3(...arguments) : v
+        
+                        const o_vec_a = new O_vec3(
+                            this.n_y,this.n_z,this.n_x
+                        )
+                        const o_vec_b = new O_vec3(
+                            o_vec.n_z,o_vec.n_x,o_vec.n_y
+                        )
+                        const o_vec_c = new O_vec3(
+                            this.n_z,this.n_x,this.n_y
+                        )
+                        const o_vec_d = new O_vec3(
+                            o_vec.n_y,o_vec.n_z,o_vec.n_x
+                        )
+                        
+                                    this.n_x = o_vec_a.n_x * o_vec_b.n_x - o_vec_c.n_x * o_vec_d.n_x,
+this.n_y = o_vec_a.n_y * o_vec_b.n_y - o_vec_c.n_y * o_vec_d.n_y,
+this.n_z = o_vec_a.n_z * o_vec_b.n_z - o_vec_c.n_z * o_vec_d.n_z
+                                    return this
+                                    
+                    }
+        
+                    
+    O_vec3.prototype.crossproducteq = O_vec3.prototype.crosseq
     
     
 
@@ -2322,6 +2414,7 @@ this.n_w + o_vec.n_w
 this.n_y += o_vec.n_y
 this.n_z += o_vec.n_z
 this.n_w += o_vec.n_w
+                                    return this
                                     
 
                         }
@@ -2356,6 +2449,7 @@ this.n_w - o_vec.n_w
 this.n_y -= o_vec.n_y
 this.n_z -= o_vec.n_z
 this.n_w -= o_vec.n_w
+                                    return this
                                     
 
                         }
@@ -2390,6 +2484,7 @@ this.n_w * o_vec.n_w
 this.n_y *= o_vec.n_y
 this.n_z *= o_vec.n_z
 this.n_w *= o_vec.n_w
+                                    return this
                                     
 
                         }
@@ -2424,6 +2519,7 @@ this.n_w / o_vec.n_w
 this.n_y /= o_vec.n_y
 this.n_z /= o_vec.n_z
 this.n_w /= o_vec.n_w
+                                    return this
                                     
 
                         }
@@ -2529,6 +2625,7 @@ this.n_w * o_vec.n_w
 this.n_y = this.n_y / n_length
 this.n_z = this.n_z / n_length
 this.n_w = this.n_w / n_length
+                return this
             }
 
             
@@ -2555,6 +2652,7 @@ this.n_w = this.n_w / n_length
 this.n_y = this.n_y % 1
 this.n_z = this.n_z % 1
 this.n_w = this.n_w % 1
+                return this
             }
 
             
@@ -2573,11 +2671,14 @@ this.n_w = this.n_w % 1
             
     O_vec4.prototype.smallestangle = O_vec4.prototype.sangle
 O_vec4.prototype.shortestangle = O_vec4.prototype.sangle
-    O_vec4.prototype.smallestangle_deg = function(){
-                    (O_vec4.n_tau / O_vec4.prototype.sangle(...arguments))*360
+    O_vec4.prototype.sangle_deg = function(){
+                    return (O_vec4.prototype.sangle.call(this,...arguments)/O_vec4.n_tau)*360
+                }
+O_vec4.prototype.smallestangle_deg = function(){
+                    return (O_vec4.prototype.sangle.call(this,...arguments)/O_vec4.n_tau)*360
                 }
 O_vec4.prototype.shortestangle_deg = function(){
-                    (O_vec4.n_tau / O_vec4.prototype.sangle(...arguments))*360
+                    return (O_vec4.prototype.sangle.call(this,...arguments)/O_vec4.n_tau)*360
                 }
     
 
@@ -2585,7 +2686,7 @@ O_vec4.prototype.shortestangle_deg = function(){
             function(v){
                 const o_vec = (typeof v == 'number') ? new O_vec4(...arguments) : v
                 let o_vec_diff = this.sub(o_vec);
-                return Math.PI-Math.atan2(
+                return Math.atan2(
                     o_vec_diff.n_x,
                     o_vec_diff.n_y
                 )
@@ -2593,32 +2694,72 @@ O_vec4.prototype.shortestangle_deg = function(){
 
             
     O_vec4.prototype.horizontalangle = O_vec4.prototype.hangle
-    O_vec4.prototype.horizontalangle_deg = function(){
-                    (O_vec4.n_tau / O_vec4.prototype.hangle(...arguments))*360
+    O_vec4.prototype.hangle_deg = function(){
+                    return (O_vec4.prototype.hangle.call(this,...arguments)/O_vec4.n_tau)*360
+                }
+O_vec4.prototype.horizontalangle_deg = function(){
+                    return (O_vec4.prototype.hangle.call(this,...arguments)/O_vec4.n_tau)*360
                 }
     
 
     O_vec4.prototype.cross = 
-            function(v){
-                const o_vec = (typeof v == 'number') ? new O_vec4(...arguments) : v
-
-                const o_vec_a = new O_vec4(
-                    this.n_y,this.n_z,this.n_w,this.n_x
-                )
-                const o_vec_b = new O_vec4(
-                    o_vec.n_z,o_vec.n_w,o_vec.n_x,o_vec.n_y
-                )
-                const o_vec_c = new O_vec4(
-                    this.n_z,this.n_w,this.n_x,this.n_y
-                )
-                const o_vec_d = new O_vec4(
-                    o_vec.n_y,o_vec.n_z,o_vec.n_w,o_vec.n_x
-                )
-                return o_vec_a.multiply(o_vec_b).subtract(o_vec_c.multiply(o_vec_d))
-            }
-
-            
+                    function(v){
+                        const o_vec = (typeof v == 'number') ? new O_vec4(...arguments) : v
+        
+                        const o_vec_a = new O_vec4(
+                            this.n_y,this.n_z,this.n_w,this.n_x
+                        )
+                        const o_vec_b = new O_vec4(
+                            o_vec.n_z,o_vec.n_w,o_vec.n_x,o_vec.n_y
+                        )
+                        const o_vec_c = new O_vec4(
+                            this.n_z,this.n_w,this.n_x,this.n_y
+                        )
+                        const o_vec_d = new O_vec4(
+                            o_vec.n_y,o_vec.n_z,o_vec.n_w,o_vec.n_x
+                        )
+                        
+                                    return new O_vec4(
+                                    this.n_x = o_vec_a.n_x * o_vec_b.n_x - o_vec_c.n_x * o_vec_d.n_x,
+this.n_y = o_vec_a.n_y * o_vec_b.n_y - o_vec_c.n_y * o_vec_d.n_y,
+this.n_z = o_vec_a.n_z * o_vec_b.n_z - o_vec_c.n_z * o_vec_d.n_z,
+this.n_w = o_vec_a.n_w * o_vec_b.n_w - o_vec_c.n_w * o_vec_d.n_w
+                                    )
+                                    
+                    }
+        
+                    
     O_vec4.prototype.crossproduct = O_vec4.prototype.cross
+    
+    
+
+    O_vec4.prototype.crosseq = 
+                    function(v){
+                        const o_vec = (typeof v == 'number') ? new O_vec4(...arguments) : v
+        
+                        const o_vec_a = new O_vec4(
+                            this.n_y,this.n_z,this.n_w,this.n_x
+                        )
+                        const o_vec_b = new O_vec4(
+                            o_vec.n_z,o_vec.n_w,o_vec.n_x,o_vec.n_y
+                        )
+                        const o_vec_c = new O_vec4(
+                            this.n_z,this.n_w,this.n_x,this.n_y
+                        )
+                        const o_vec_d = new O_vec4(
+                            o_vec.n_y,o_vec.n_z,o_vec.n_w,o_vec.n_x
+                        )
+                        
+                                    this.n_x = o_vec_a.n_x * o_vec_b.n_x - o_vec_c.n_x * o_vec_d.n_x,
+this.n_y = o_vec_a.n_y * o_vec_b.n_y - o_vec_c.n_y * o_vec_d.n_y,
+this.n_z = o_vec_a.n_z * o_vec_b.n_z - o_vec_c.n_z * o_vec_d.n_z,
+this.n_w = o_vec_a.n_w * o_vec_b.n_w - o_vec_c.n_w * o_vec_d.n_w
+                                    return this
+                                    
+                    }
+        
+                    
+    O_vec4.prototype.crossproducteq = O_vec4.prototype.crosseq
     
     
 
