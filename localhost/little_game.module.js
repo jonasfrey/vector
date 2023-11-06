@@ -384,6 +384,10 @@ let f_resize = function(){
     o_canvas.width = window.innerWidth;
     o_canvas.height = window.innerHeight;
 }
+window.onresize = function(){
+    f_resize()
+
+}
 f_resize()
 
 let f_draw_shape = function(
