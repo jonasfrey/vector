@@ -56,11 +56,11 @@ let f_n__solved = function(
 }
 let f_solve_linear_equation_system = function(
     a_a_n, // [[1,2, =4], [2,3, =3]]
-    [
-        [1, 2, 4, =5]
-        [2, 3, 4, =1]
-        [1, 2, 7, =2]
-    ]
+    // [
+    //     [1, 2, 4, =5]
+    //     [2, 3, 4, =1]
+    //     [1, 2, 7, =2]
+    // ]
 ){
     let n_zeros = 0;
     for(let n_idx in a_a_n){
@@ -171,6 +171,7 @@ let f_render = function(o_ctx){
             let o_trn = o_state.a_o_trn[n_idx];
             if((n_idx+1) % 2 == 0){
                 o_state.o_ctx.strokeStyle = 'red'
+
                 o_state.o_ctx.beginPath();
                 let o1 = o_state.a_o_trn[n_idx-1];
                 o_state.o_ctx.moveTo(
@@ -179,11 +180,27 @@ let f_render = function(o_ctx){
                 o_state.o_ctx.lineTo(...o_trn.a_n_comp)
                 o_state.o_ctx.stroke(); 
             }
-            o_state.o_ctx.fillStyle = 'red'
+            if(n_idx == (o_state.n_idx__a_o_trn+1)%o_state.a_o_trn.length){
+                o_state.o_ctx.fillStyle = 'green'
+            }else{
+                o_state.o_ctx.fillStyle = 'red'
+            }
             o_state.o_ctx.beginPath();
             o_state.o_ctx.arc(
                 o_trn.n_x,
                 o_trn.n_y,
+                10,
+                0, 
+                2*Math.PI)
+            o_state.o_ctx.fill(); 
+
+
+            
+            o_state.o_ctx.fillStyle = 'rgba(222,200,222,0.7)'
+            o_state.o_ctx.beginPath();
+            o_state.o_ctx.arc(
+                o_state.o_trn__mouse.n_x,
+                o_state.o_trn__mouse.n_y,
                 10,
                 0, 
                 2*Math.PI)
