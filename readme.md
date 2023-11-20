@@ -1,4 +1,4 @@
-<!-- {"s_msg":"this file was automatically generated","s_by":"f_generate_markdown.module.js","s_ts_created":"Sun Nov 05 2023 14:20:41 GMT+0100 (Central European Standard Time)","n_ts_created":1699190441829} -->
+<!-- {"s_msg":"this file was automatically generated","s_by":"f_generate_markdown.module.js","s_ts_created":"Mon Nov 20 2023 23:04:45 GMT+0100 (Central European Standard Time)","n_ts_created":1700517885404} -->
 ![f_o_vec logo](./f_o_vec_library.png)
 # f_o_vec
 this is a small library that handles vectors in javascript, at least as good as it can be done UwU
@@ -211,4 +211,76 @@ unfortunately there is no pythagorean quituple
             f_assert_equals(new O_vec2(0,0).hangle(0,-1),-((Math.PI*2)/4)*0);
             f_assert_equals(new O_vec2(0,0).hangle(-1,0),((Math.PI*2)/4)*1);
 
+
+```
+### convert/parse (using parseInt) a vector or some of its properties to an integer
+```javascript
+
+            f_assert_equals(
+                new O_vec2(1.12341234, 2.12341234).comps_to_int().toString(),
+                new O_vec2(1,2).toString()
+            );
+
+            f_assert_equals(
+                new O_vec2(1.12341234, 2.12341234).to_int().toString(),
+                new O_vec2(1,2).toString()
+            );
+
+            f_assert_equals(
+                new O_vec2(-23.123, -31.1234).to_int().toString(),
+                new O_vec2(-23,-31).toString()
+            );
+
+            f_assert_equals(
+                new O_vec2(-23.123, -31.1234).to_int('n_x').toString(),
+                new O_vec2(-23,-31.1234).toString()
+            );
+
+            f_assert_equals(
+                new O_vec4(1.2,3.4,5.6,7.8).to_int('x', 'w').toString(),
+                new O_vec4(1,3.4, 5.6, 7).toString()
+            );
+            // eq functions, 
+            let o1 = new O_vec4(1.2,3.4,5.6,7.8);
+            o1.to_inteq();
+            f_assert_equals(
+                o1.toString(),
+                new O_vec4(1,3,5,7).toString()
+            );
+```
+### convert a vector to a one dimensional index
+```javascript
+
+            //lets say we have a 4x3 matrix
+            //     0  1  2  3 
+            //------------------< X
+            // 0 | 0, 1, 2, 3
+            // 1 | 4, 5, 6, 7 // X:Y 1:2 would be index 9
+            // 2 | 8, 9,10,11
+            //   ^
+            //   Y
+            f_assert_equals(
+                new O_vec2(1.1234,2.9234).to_index(
+                    new O_vec2(4,3)
+                ),
+                9
+            );
+
+```
+### convert a vector to a one dimensional index
+```javascript
+
+            //lets say we have a 4x3 (o_scl) matrix
+            //     0  1  2  3 
+            //------------------< X
+            // 0 | 0, 1, 2, 3
+            // 1 | 4, 5, 6, 7 
+            // 2 | 8, 9,10,11 // index 1 would be X:Y 3:2
+            //   ^
+            //   Y
+            let o_scl = new O_vec2(4,3);
+            f_assert_equals(
+                o_scl.from_index(11),
+                new O_vec2(3,2)// this is the resulting translation o_trn
+            );
 ```

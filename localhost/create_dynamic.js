@@ -21,11 +21,13 @@ class O_vec_funtion{
     constructor(
         a_s_name,// first is main function, following are aliases 
         f_s_f__from_o_vec_class, 
-        b_has_to_degrees_function
+        b_has_to_degrees_function = false,
+        f_b_generate = ()=>{return true}
     ){
         this.a_s_name = a_s_name 
         this.f_s_f__from_o_vec_class = f_s_f__from_o_vec_class,
         this.b_has_to_degrees_function = b_has_to_degrees_function
+        this.f_b_generate = f_b_generate
     }
 }
 let a_o_vec_function = [
@@ -78,6 +80,65 @@ let a_o_vec_function = [
             )
         }
     ),
+    new O_vec_funtion(
+        ['comps_to_int', 'to_int'], 
+        function(o_vec_class){
+            return `
+            function(){
+                let b_all = arguments.length == 0
+                let a_v_arg = Array.from(arguments);
+                return new ${o_vec_class.s_name}(
+                    ${o_vec_class.a_a_s_name_component.map(
+                        a_s_name_component =>{
+                            return `(b_all || a_v_arg?.some(v=>${JSON.stringify(a_s_name_component)}.includes(v))) ? parseInt(this.${a_s_name_component[0]}): this.${a_s_name_component[0]}`
+                        }
+                    ).join('\n,')}
+                )
+            }
+
+            `
+        } 
+    ),
+    new O_vec_funtion(
+        ['to_index', 'to_idx'], 
+        function(o_vec_class){
+            let a_a_s = o_vec_class.a_a_s_name_component
+            return `
+            function(o_scl){
+                return (
+                ${[
+                    `(parseInt(this.${a_a_s?.[0]?.[0]}) % parseInt(o_scl.${a_a_s?.[0]?.[0]}))`,
+                    `+ (parseInt(this.${a_a_s?.[1]?.[0]}) * parseInt(o_scl.${a_a_s?.[0]?.[0]}))`,
+                    `+ (parseInt(this.${a_a_s?.[2]?.[0]}) * parseInt(o_scl.${a_a_s?.[0]?.[0]}) * parseInt(o_scl.${a_a_s?.[1]?.[0]}))`,
+                    `+ (parseInt(this.${a_a_s?.[3]?.[0]}) * parseInt(o_scl.${a_a_s?.[0]?.[0]}) * parseInt(o_scl.${a_a_s?.[1]?.[0]} * parseInt(o_scl.${a_a_s?.[2]?.[0]})))`   
+                ].slice(0,o_vec_class.n_dimensions).join('\n')}
+                )
+            }
+
+            `
+        } 
+    ),
+    new O_vec_funtion(
+        ['from_index', 'from_idx'], 
+        function(o_vec_class){
+            let a_a_s = o_vec_class.a_a_s_name_component
+            return `
+            function(n_idx){
+                n_idx = parseInt(n_idx)
+
+                return new ${o_vec_class.s_name}(
+                ${[
+                    `(n_idx % parseInt(this.${a_a_s?.[0]?.[0]}))`,
+                    `parseInt(n_idx / parseInt(this.${a_a_s?.[0]?.[0]}))`,
+                    `parseInt(n_idx / parseInt(this.${a_a_s?.[0]?.[0]}) * parseInt(this.${a_a_s?.[1]?.[0]}))`,
+                    `parseInt(n_idx / parseInt(this.${a_a_s?.[0]?.[0]}) * parseInt(this.${a_a_s?.[1]?.[0]}) * parseInt(this.${a_a_s?.[2]?.[0]}))`   
+                ].slice(0,o_vec_class.n_dimensions).join(',\n')}
+                )
+            }
+
+            `
+        } 
+    ),
     ...[
         {a_s_name: ['compsadd' ], s_operator: '+', n_start:0},
         {a_s_name: ['compssub' ], s_operator: '-', n_start:0},
@@ -104,6 +165,7 @@ let a_o_vec_function = [
             )
         }
     ),
+
     new O_vec_funtion(
         ['dot', 'dotproduct'], 
         function(o_vec_class){
@@ -235,7 +297,9 @@ let a_o_vec_function = [
 
             `
         },
-        true
+        true, 
+        (o_vec_class)=>{return o_vec_class.n_dimensions == 2}
+
     ),
     ...[0,1].map(
         (n)=>{
@@ -309,7 +373,33 @@ let a_o_vec_function = [
             )
             
         }
-    )
+    ),
+    // automatic '...eq' functions
+    // maybe this is not very performant but i am lazy 
+    ...[
+        'comps_to_inteq', 'to_inteq'
+    ].map(s_name_function_with_eq_suffix=>{
+        let s_name_function = s_name_function_with_eq_suffix.slice(0, -2);
+        return new O_vec_funtion(
+            [s_name_function_with_eq_suffix], 
+            function(o_vec_class){
+                return `
+                function(){
+                    let o_vec = this.${s_name_function}(...arguments);
+                    ${o_vec_class.a_a_s_name_component.map(
+                        a_s_name_component =>{
+                            return `this.${a_s_name_component[0]} = o_vec.${a_s_name_component[0]}`
+                        }
+                    ).join('\n')}
+                    return this
+    
+                }
+    
+                `
+            } 
+        )
+
+    })
 
 
 ]
@@ -321,6 +411,13 @@ let a_a_s_name_component_z =  ['n_z', 'z', '2']
 let a_a_s_name_component_w =  ['n_w', 'w', '3']
 
 let a_o_vec_class = [
+    new O_vec_class(
+        "O_vec1",
+        1, 
+        [
+            a_a_s_name_component_x,
+        ]
+    ), 
     new O_vec_class(
         "O_vec2",
         2, 
@@ -412,19 +509,23 @@ class ${o_vec_class.s_name}{
 
 
         (()=>{
+            // vector swizzling
             let n_total_combinations = Math.pow(o_vec_class.n_dimensions, o_vec_class.n_dimensions);
             let a_a_n_idx = []
-            for (let n = 0; n < n_total_combinations; n++) {
-                let a_n_idx = [];
-                // Convert the number to base 3 and pad it with zeros to ensure it has 3 digits
-                let base3String = n.toString(o_vec_class.n_dimensions).padStart(o_vec_class.n_dimensions, '0');
-                for (let n2 = 0; n2 < o_vec_class.n_dimensions; n2++) {
-                    // Convert each character back to an integer and add to the index array
-                    a_n_idx.push(parseInt(base3String[n2], o_vec_class.n_dimensions));
+            if(o_vec_class.n_dimensions > 1){
+
+                for (let n = 0; n < n_total_combinations; n++) {
+                    let a_n_idx = [];
+                    // Convert the number to base 3 and pad it with zeros to ensure it has 3 digits
+                    let base3String = n.toString(o_vec_class.n_dimensions).padStart(o_vec_class.n_dimensions, '0');
+                    for (let n2 = 0; n2 < o_vec_class.n_dimensions; n2++) {
+                        // Convert each character back to an integer and add to the index array
+                        a_n_idx.push(parseInt(base3String[n2], o_vec_class.n_dimensions));
+                    }
+                    // console.log(n);
+                    // console.log(a_n_idx);
+                    a_a_n_idx.push(a_n_idx)
                 }
-                // console.log(n);
-                // console.log(a_n_idx);
-                a_a_n_idx.push(a_n_idx)
             }
             return a_a_n_idx.map((a_n_idx)=>{
                 return `get ${a_n_idx.map(n=>o_vec_class.a_a_s_name_component[n][1]).join('')}(){
@@ -439,6 +540,10 @@ class ${o_vec_class.s_name}{
 }
 ${o_vec_class.s_name}.n_tau = Math.PI * 2
 ${a_o_vec_function.map(o_vec_function=>{
+    if(!o_vec_function.f_b_generate(o_vec_class)){
+        return ''
+    }
+
     let s_name_main = o_vec_function.a_s_name[0]
     let s_func = o_vec_function.f_s_f__from_o_vec_class(o_vec_class)
     return `
@@ -457,7 +562,7 @@ ${a_o_vec_function.map(o_vec_function=>{
         return ''
     })()}
     ` 
-}).join('\n')}
+}).filter(v=>v!= '').join('\n')}
 
 export {${o_vec_class.s_name}}
     `

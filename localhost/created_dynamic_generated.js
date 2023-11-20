@@ -1,4 +1,417 @@
 
+class O_vec1{
+    constructor(
+        n_x
+    ){
+
+
+        
+                
+                this.n_x = (typeof n_x === 'number') ? n_x : 0
+                
+    }
+    toString(){
+        return '('+this.n_x.toString()+')'
+    }
+    
+                    get x(){
+                        return this.n_x
+                    }
+                    set x(v){
+                        this.n_x = v
+                    }
+                    
+
+                    get 0(){
+                        return this.n_x
+                    }
+                    set 0(v){
+                        this.n_x = v
+                    }
+                    
+
+    get a_n_comp(){
+        return [
+            this.n_x
+        ]
+    }
+    
+}
+O_vec1.n_tau = Math.PI * 2
+
+    O_vec1.prototype.add = 
+                        function(v){
+                            const o_vec = (typeof v == 'number') ? new O_vec1(...arguments) : v
+                            
+                                    return new O_vec1(
+                                        this.n_x + o_vec.n_x
+                                    )
+                                    
+
+                        }
+                    
+    
+    
+    
+
+    O_vec1.prototype.addeq = 
+                        function(v){
+                            const o_vec = (typeof v == 'number') ? new O_vec1(...arguments) : v
+                            
+                                    this.n_x += o_vec.n_x
+                                    return this
+                                    
+
+                        }
+                    
+    
+    
+    
+
+    O_vec1.prototype.sub = 
+                        function(v){
+                            const o_vec = (typeof v == 'number') ? new O_vec1(...arguments) : v
+                            
+                                    return new O_vec1(
+                                        this.n_x - o_vec.n_x
+                                    )
+                                    
+
+                        }
+                    
+    O_vec1.prototype.subtract = O_vec1.prototype.sub
+    
+    
+
+    O_vec1.prototype.subeq = 
+                        function(v){
+                            const o_vec = (typeof v == 'number') ? new O_vec1(...arguments) : v
+                            
+                                    this.n_x -= o_vec.n_x
+                                    return this
+                                    
+
+                        }
+                    
+    O_vec1.prototype.subtracteq = O_vec1.prototype.subeq
+    
+    
+
+    O_vec1.prototype.mul = 
+                        function(v){
+                            const o_vec = (typeof v == 'number') ? new O_vec1(...arguments) : v
+                            
+                                    return new O_vec1(
+                                        this.n_x * o_vec.n_x
+                                    )
+                                    
+
+                        }
+                    
+    O_vec1.prototype.multiply = O_vec1.prototype.mul
+    
+    
+
+    O_vec1.prototype.muleq = 
+                        function(v){
+                            const o_vec = (typeof v == 'number') ? new O_vec1(...arguments) : v
+                            
+                                    this.n_x *= o_vec.n_x
+                                    return this
+                                    
+
+                        }
+                    
+    O_vec1.prototype.multiplyeq = O_vec1.prototype.muleq
+    
+    
+
+    O_vec1.prototype.div = 
+                        function(v){
+                            const o_vec = (typeof v == 'number') ? new O_vec1(...arguments) : v
+                            
+                                    return new O_vec1(
+                                        this.n_x / o_vec.n_x
+                                    )
+                                    
+
+                        }
+                    
+    O_vec1.prototype.divide = O_vec1.prototype.div
+    
+    
+
+    O_vec1.prototype.diveq = 
+                        function(v){
+                            const o_vec = (typeof v == 'number') ? new O_vec1(...arguments) : v
+                            
+                                    this.n_x /= o_vec.n_x
+                                    return this
+                                    
+
+                        }
+                    
+    O_vec1.prototype.divideeq = O_vec1.prototype.diveq
+    
+    
+
+    O_vec1.prototype.comps_to_int = 
+            function(){
+                let b_all = arguments.length == 0
+                let a_v_arg = Array.from(arguments);
+                return new O_vec1(
+                    (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? parseInt(this.n_x): this.n_x
+                )
+            }
+
+            
+    O_vec1.prototype.to_int = O_vec1.prototype.comps_to_int
+    
+    
+
+    O_vec1.prototype.to_index = 
+            function(o_scl){
+                return (
+                (parseInt(this.n_x) % parseInt(o_scl.n_x))
+                )
+            }
+
+            
+    O_vec1.prototype.to_idx = O_vec1.prototype.to_index
+    
+    
+
+    O_vec1.prototype.from_index = 
+            function(n_idx){
+                n_idx = parseInt(n_idx)
+
+                return new O_vec1(
+                (n_idx % parseInt(this.n_x))
+                )
+            }
+
+            
+    O_vec1.prototype.from_idx = O_vec1.prototype.from_index
+    
+    
+
+    O_vec1.prototype.compsadd = 
+                        function(){
+                            return 0
+                            + this.n_x
+                        }
+                    
+    
+    
+    
+
+    O_vec1.prototype.compssub = 
+                        function(){
+                            return 0
+                            - this.n_x
+                        }
+                    
+    
+    
+    
+
+    O_vec1.prototype.compsmul = 
+                        function(){
+                            return 1
+                            * this.n_x
+                        }
+                    
+    
+    
+    
+
+    O_vec1.prototype.compsdiv = 
+                        function(){
+                            return 1
+                            / this.n_x
+                        }
+                    
+    
+    
+    
+
+    O_vec1.prototype.dot = 
+            function(v){
+                const o_vec = (typeof v == 'number') ? new O_vec1(...arguments) : v
+                return this.n_x * o_vec.n_x
+            }
+
+            
+    O_vec1.prototype.dotproduct = O_vec1.prototype.dot
+    
+    
+
+    O_vec1.prototype.len = 
+            function(){
+                return Math.sqrt(this.n_x * this.n_x)
+            }
+
+            
+    O_vec1.prototype.length = O_vec1.prototype.len
+    
+    
+
+    O_vec1.prototype.norm = 
+            function(){
+                const n_length = this.length();
+                return new O_vec1(
+                    this.n_x / n_length
+                )
+
+            }
+
+            
+    O_vec1.prototype.normalize = O_vec1.prototype.norm
+    
+    
+
+    O_vec1.prototype.normeq = 
+            function(){
+                const n_length = this.length();
+                this.n_x = this.n_x / n_length
+                return this
+            }
+
+            
+    O_vec1.prototype.normalizeeq = O_vec1.prototype.normeq
+    
+    
+
+    O_vec1.prototype.fract = 
+            function(){
+                return new O_vec1(
+                    this.n_x % 1
+                )
+
+            }
+
+            
+    
+    
+    
+
+    O_vec1.prototype.fracteq = 
+            function(){
+                this.n_x = this.n_x % 1
+                return this
+            }
+
+            
+    
+    
+    
+
+    O_vec1.prototype.sangle = 
+            function(v){
+                const o_vec = (typeof v == 'number') ? new O_vec1(...arguments) : v
+                return Math.acos(
+                    this.dot(o_vec)/(this.length()*o_vec.length())
+                )
+            }
+
+            
+    O_vec1.prototype.smallestangle = O_vec1.prototype.sangle
+O_vec1.prototype.shortestangle = O_vec1.prototype.sangle
+    O_vec1.prototype.sangle_deg = function(){
+                    return (O_vec1.prototype.sangle.call(this,...arguments)/O_vec1.n_tau)*360
+                }
+O_vec1.prototype.smallestangle_deg = function(){
+                    return (O_vec1.prototype.sangle.call(this,...arguments)/O_vec1.n_tau)*360
+                }
+O_vec1.prototype.shortestangle_deg = function(){
+                    return (O_vec1.prototype.sangle.call(this,...arguments)/O_vec1.n_tau)*360
+                }
+    
+
+    O_vec1.prototype.cross = 
+                    function(v){
+                        const o_vec = (typeof v == 'number') ? new O_vec1(...arguments) : v
+        
+                        const o_vec_a = new O_vec1(
+                            this.n_x
+                        )
+                        const o_vec_b = new O_vec1(
+                            o_vec.n_x
+                        )
+                        const o_vec_c = new O_vec1(
+                            this.n_x
+                        )
+                        const o_vec_d = new O_vec1(
+                            o_vec.n_x
+                        )
+                        
+                                    return new O_vec1(
+                                    this.n_x = o_vec_a.n_x * o_vec_b.n_x - o_vec_c.n_x * o_vec_d.n_x
+                                    )
+                                    
+                    }
+        
+                    
+    O_vec1.prototype.crossproduct = O_vec1.prototype.cross
+    
+    
+
+    O_vec1.prototype.crosseq = 
+                    function(v){
+                        const o_vec = (typeof v == 'number') ? new O_vec1(...arguments) : v
+        
+                        const o_vec_a = new O_vec1(
+                            this.n_x
+                        )
+                        const o_vec_b = new O_vec1(
+                            o_vec.n_x
+                        )
+                        const o_vec_c = new O_vec1(
+                            this.n_x
+                        )
+                        const o_vec_d = new O_vec1(
+                            o_vec.n_x
+                        )
+                        
+                                    this.n_x = o_vec_a.n_x * o_vec_b.n_x - o_vec_c.n_x * o_vec_d.n_x
+                                    return this
+                                    
+                    }
+        
+                    
+    O_vec1.prototype.crossproducteq = O_vec1.prototype.crosseq
+    
+    
+
+    O_vec1.prototype.comps_to_inteq = 
+                function(){
+                    let o_vec = this.comps_to_int(...arguments);
+                    this.n_x = o_vec.n_x
+                    return this
+    
+                }
+    
+                
+    
+    
+    
+
+    O_vec1.prototype.to_inteq = 
+                function(){
+                    let o_vec = this.to_int(...arguments);
+                    this.n_x = o_vec.n_x
+                    return this
+    
+                }
+    
+                
+    
+    
+    
+
+export {O_vec1}
+    
+
 class O_vec2{
     constructor(
         n_x,
@@ -201,6 +614,49 @@ this.n_y /= o_vec.n_y
                         }
                     
     O_vec2.prototype.divideeq = O_vec2.prototype.diveq
+    
+    
+
+    O_vec2.prototype.comps_to_int = 
+            function(){
+                let b_all = arguments.length == 0
+                let a_v_arg = Array.from(arguments);
+                return new O_vec2(
+                    (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? parseInt(this.n_x): this.n_x
+,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? parseInt(this.n_y): this.n_y
+                )
+            }
+
+            
+    O_vec2.prototype.to_int = O_vec2.prototype.comps_to_int
+    
+    
+
+    O_vec2.prototype.to_index = 
+            function(o_scl){
+                return (
+                (parseInt(this.n_x) % parseInt(o_scl.n_x))
++ (parseInt(this.n_y) * parseInt(o_scl.n_x))
+                )
+            }
+
+            
+    O_vec2.prototype.to_idx = O_vec2.prototype.to_index
+    
+    
+
+    O_vec2.prototype.from_index = 
+            function(n_idx){
+                n_idx = parseInt(n_idx)
+
+                return new O_vec2(
+                (n_idx % parseInt(this.n_x)),
+parseInt(n_idx / parseInt(this.n_x))
+                )
+            }
+
+            
+    O_vec2.prototype.from_idx = O_vec2.prototype.from_index
     
     
 
@@ -418,6 +874,34 @@ this.n_y = o_vec_a.n_y * o_vec_b.n_y - o_vec_c.n_y * o_vec_d.n_y
         
                     
     O_vec2.prototype.crossproducteq = O_vec2.prototype.crosseq
+    
+    
+
+    O_vec2.prototype.comps_to_inteq = 
+                function(){
+                    let o_vec = this.comps_to_int(...arguments);
+                    this.n_x = o_vec.n_x
+this.n_y = o_vec.n_y
+                    return this
+    
+                }
+    
+                
+    
+    
+    
+
+    O_vec2.prototype.to_inteq = 
+                function(){
+                    let o_vec = this.to_int(...arguments);
+                    this.n_x = o_vec.n_x
+this.n_y = o_vec.n_y
+                    return this
+    
+                }
+    
+                
+    
     
     
 
@@ -774,6 +1258,52 @@ this.n_z /= o_vec.n_z
     
     
 
+    O_vec3.prototype.comps_to_int = 
+            function(){
+                let b_all = arguments.length == 0
+                let a_v_arg = Array.from(arguments);
+                return new O_vec3(
+                    (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? parseInt(this.n_x): this.n_x
+,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? parseInt(this.n_y): this.n_y
+,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? parseInt(this.n_z): this.n_z
+                )
+            }
+
+            
+    O_vec3.prototype.to_int = O_vec3.prototype.comps_to_int
+    
+    
+
+    O_vec3.prototype.to_index = 
+            function(o_scl){
+                return (
+                (parseInt(this.n_x) % parseInt(o_scl.n_x))
++ (parseInt(this.n_y) * parseInt(o_scl.n_x))
++ (parseInt(this.n_z) * parseInt(o_scl.n_x) * parseInt(o_scl.n_y))
+                )
+            }
+
+            
+    O_vec3.prototype.to_idx = O_vec3.prototype.to_index
+    
+    
+
+    O_vec3.prototype.from_index = 
+            function(n_idx){
+                n_idx = parseInt(n_idx)
+
+                return new O_vec3(
+                (n_idx % parseInt(this.n_x)),
+parseInt(n_idx / parseInt(this.n_x)),
+parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y))
+                )
+            }
+
+            
+    O_vec3.prototype.from_idx = O_vec3.prototype.from_index
+    
+    
+
     O_vec3.prototype.compsadd = 
                         function(){
                             return 0
@@ -921,26 +1451,6 @@ O_vec3.prototype.shortestangle_deg = function(){
                 }
     
 
-    O_vec3.prototype.hangle = 
-            function(v){
-                const o_vec = (typeof v == 'number') ? new O_vec3(...arguments) : v
-                let o_vec_diff = this.sub(o_vec);
-                return Math.atan2(
-                    o_vec_diff.n_x,
-                    o_vec_diff.n_y
-                )
-            }
-
-            
-    O_vec3.prototype.horizontalangle = O_vec3.prototype.hangle
-    O_vec3.prototype.hangle_deg = function(){
-                    return (O_vec3.prototype.hangle.call(this,...arguments)/O_vec3.n_tau)*360
-                }
-O_vec3.prototype.horizontalangle_deg = function(){
-                    return (O_vec3.prototype.hangle.call(this,...arguments)/O_vec3.n_tau)*360
-                }
-    
-
     O_vec3.prototype.cross = 
                     function(v){
                         const o_vec = (typeof v == 'number') ? new O_vec3(...arguments) : v
@@ -997,6 +1507,36 @@ this.n_z = o_vec_a.n_z * o_vec_b.n_z - o_vec_c.n_z * o_vec_d.n_z
         
                     
     O_vec3.prototype.crossproducteq = O_vec3.prototype.crosseq
+    
+    
+
+    O_vec3.prototype.comps_to_inteq = 
+                function(){
+                    let o_vec = this.comps_to_int(...arguments);
+                    this.n_x = o_vec.n_x
+this.n_y = o_vec.n_y
+this.n_z = o_vec.n_z
+                    return this
+    
+                }
+    
+                
+    
+    
+    
+
+    O_vec3.prototype.to_inteq = 
+                function(){
+                    let o_vec = this.to_int(...arguments);
+                    this.n_x = o_vec.n_x
+this.n_y = o_vec.n_y
+this.n_z = o_vec.n_z
+                    return this
+    
+                }
+    
+                
+    
     
     
 
@@ -2528,6 +3068,55 @@ this.n_w /= o_vec.n_w
     
     
 
+    O_vec4.prototype.comps_to_int = 
+            function(){
+                let b_all = arguments.length == 0
+                let a_v_arg = Array.from(arguments);
+                return new O_vec4(
+                    (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? parseInt(this.n_x): this.n_x
+,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? parseInt(this.n_y): this.n_y
+,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? parseInt(this.n_z): this.n_z
+,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? parseInt(this.n_w): this.n_w
+                )
+            }
+
+            
+    O_vec4.prototype.to_int = O_vec4.prototype.comps_to_int
+    
+    
+
+    O_vec4.prototype.to_index = 
+            function(o_scl){
+                return (
+                (parseInt(this.n_x) % parseInt(o_scl.n_x))
++ (parseInt(this.n_y) * parseInt(o_scl.n_x))
++ (parseInt(this.n_z) * parseInt(o_scl.n_x) * parseInt(o_scl.n_y))
++ (parseInt(this.n_w) * parseInt(o_scl.n_x) * parseInt(o_scl.n_y * parseInt(o_scl.n_z)))
+                )
+            }
+
+            
+    O_vec4.prototype.to_idx = O_vec4.prototype.to_index
+    
+    
+
+    O_vec4.prototype.from_index = 
+            function(n_idx){
+                n_idx = parseInt(n_idx)
+
+                return new O_vec4(
+                (n_idx % parseInt(this.n_x)),
+parseInt(n_idx / parseInt(this.n_x)),
+parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y)),
+parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y) * parseInt(this.n_z))
+                )
+            }
+
+            
+    O_vec4.prototype.from_idx = O_vec4.prototype.from_index
+    
+    
+
     O_vec4.prototype.compsadd = 
                         function(){
                             return 0
@@ -2682,26 +3271,6 @@ O_vec4.prototype.shortestangle_deg = function(){
                 }
     
 
-    O_vec4.prototype.hangle = 
-            function(v){
-                const o_vec = (typeof v == 'number') ? new O_vec4(...arguments) : v
-                let o_vec_diff = this.sub(o_vec);
-                return Math.atan2(
-                    o_vec_diff.n_x,
-                    o_vec_diff.n_y
-                )
-            }
-
-            
-    O_vec4.prototype.horizontalangle = O_vec4.prototype.hangle
-    O_vec4.prototype.hangle_deg = function(){
-                    return (O_vec4.prototype.hangle.call(this,...arguments)/O_vec4.n_tau)*360
-                }
-O_vec4.prototype.horizontalangle_deg = function(){
-                    return (O_vec4.prototype.hangle.call(this,...arguments)/O_vec4.n_tau)*360
-                }
-    
-
     O_vec4.prototype.cross = 
                     function(v){
                         const o_vec = (typeof v == 'number') ? new O_vec4(...arguments) : v
@@ -2760,6 +3329,38 @@ this.n_w = o_vec_a.n_w * o_vec_b.n_w - o_vec_c.n_w * o_vec_d.n_w
         
                     
     O_vec4.prototype.crossproducteq = O_vec4.prototype.crosseq
+    
+    
+
+    O_vec4.prototype.comps_to_inteq = 
+                function(){
+                    let o_vec = this.comps_to_int(...arguments);
+                    this.n_x = o_vec.n_x
+this.n_y = o_vec.n_y
+this.n_z = o_vec.n_z
+this.n_w = o_vec.n_w
+                    return this
+    
+                }
+    
+                
+    
+    
+    
+
+    O_vec4.prototype.to_inteq = 
+                function(){
+                    let o_vec = this.to_int(...arguments);
+                    this.n_x = o_vec.n_x
+this.n_y = o_vec.n_y
+this.n_z = o_vec.n_z
+this.n_w = o_vec.n_w
+                    return this
+    
+                }
+    
+                
+    
     
     
 
