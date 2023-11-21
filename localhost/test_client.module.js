@@ -39,9 +39,100 @@ await f_deno_test_all_and_print_summary(
             f_assert_equals(o.toString(),'(1,2,3,3)');
             var o = new O_vec4(1,2,3, 4);
             f_assert_equals(o.toString(),'(1,2,3,4)');
-
+            // create a vector from another 
+            var o2 = new O_vec4(
+                o
+            );
+            f_assert_equals(
+                o.toString(), 
+                o2.toString()
+            );
+            // clone a vector
+            let o1 = new O_vec4(1,2,3,4)
+            let o_cloned = o.clone();
+            o1.n_x = 10
+            f_assert_equals(
+                o1.toString(), 
+                "(10,2,3,4)"
+            );
+            f_assert_equals(
+                o_cloned.toString(), 
+                "(1,2,3,4)"
+            );
             //readme.md:end
         }),
+        f_deno_test("modulo operator on all vector components", () => {
+            //readme.md:start
+            //md: ## modulo on vector
+            f_assert_equals(
+                new O_vec4(11,12,13,14)
+                    .mod(7)
+                    .toString(), 
+                "(4,5,6,0)"
+            );
+            f_assert_equals(
+                new O_vec4(11,22,18,19)
+                    .mod(10,10,20,20)
+                    .toString(), 
+                "(1,2,18,19)"
+            );
+            //readme.md:end
+        }),
+        f_deno_test("clamp", () => {
+            //readme.md:start
+            //md: ## clamp
+            // limit each component of the vector to a certain range
+            let o1 = new O_vec2(11,-10) 
+            f_assert_equals(
+                o1.clamp(
+                        new O_vec2(5,-5),//min,
+                        new O_vec2(10,5)//max,
+                    )
+                    .toString(), 
+                "(10,-5)"
+            );
+            
+            f_assert_equals(
+                o1.toString(),
+                "(11,-10)"
+            );
+            o1.clampeq(
+                new O_vec2(20,0),//min,
+                new O_vec2(100,100)//max,
+            )
+            f_assert_equals(
+                o1.toString(),
+                "(20,0)"
+            );
+            
+            //readme.md:end
+        }),
+        f_deno_test("wrap", () => {
+            //readme.md:start
+            //md: ## wrap
+            // limit each component of the vector to a certain range, wrap around if value gets out of range
+            // usefull for games like snake
+            let o_vec = new O_vec2(10,10)
+            f_assert_equals(
+                o_vec.wrap(
+                        new O_vec2(0,0),//min,
+                        new O_vec2(2,3)//max,
+                    )
+                    .toString(), 
+                "(0,1)"
+            );
+            f_assert_equals(
+                new O_vec2(-1,-1).wrap(
+                        new O_vec2(0,0),//min,
+                        new O_vec2(10,5)//max,
+                    )
+                    .toString(), 
+                "(9,4)"
+            );
+            //readme.md:end
+        }),
+    
+
         f_deno_test("access vector components", () => {
             //readme.md:start
             //md: ## access vector components
@@ -345,6 +436,8 @@ await f_deno_test_all_and_print_summary(
             );
             //readme.md:end
         }),
+
+
 
     ]
 )

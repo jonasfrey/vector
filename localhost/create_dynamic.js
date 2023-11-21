@@ -30,75 +30,234 @@ class O_vec_funtion{
         this.f_b_generate = f_b_generate
     }
 }
-let a_o_vec_function = [
-    ...[
-        {a_s_name: ['add' ], s_operator: '+', b_return_new : true},
-        {a_s_name: ['addeq' ], s_operator: '+=', b_return_new : false},
-        {a_s_name: ['sub' , 'subtract'], s_operator: '-', b_return_new : true},
-        {a_s_name: ['subeq' , 'subtracteq'], s_operator: '-=', b_return_new : false},
-        {a_s_name: ['mul' , 'multiply'], s_operator: '*', b_return_new : true},
-        {a_s_name: ['muleq' , 'multiplyeq'], s_operator: '*=', b_return_new : false},
-        {a_s_name: ['div' , 'divide'], s_operator: '/', b_return_new : true},
-        {a_s_name: ['diveq' , 'divideeq'], s_operator: '/=', b_return_new : false},
-
-    ].map(
-        o=>{
-            return new O_vec_funtion(
-                o.a_s_name, 
-                function(o_vec_class){
+let f_f_s_f__from_o_vec_class__from_params = function(
+    f_s_function_params = ()=>{return ''}, 
+    f_s_function_before_return = ()=>{return ''},
+    f_a_s_valuereceivers_s_component_operation, 
+    b_return_new_vector = true
+){
+    
+    return function(o_vec_class){
+        let a_s_valuereceivers_s_component_operation = f_a_s_valuereceivers_s_component_operation(
+            o_vec_class
+        )
+        return `
+        function(${f_s_function_params(o_vec_class)}){
+            ${f_s_function_before_return(o_vec_class)}
+            ${(()=>{
+                if(b_return_new_vector){
+                    return `return new ${o_vec_class.s_name}(
+                        ${a_s_valuereceivers_s_component_operation.map(
+                            a_s=>a_s.pop()
+                        ).join(',')}
+                    )`
+                }else{
                     return `
-                        function(v){
-                            const o_vec = (typeof v == 'number') ? new ${o_vec_class.s_name}(...arguments) : v
-                            ${(()=>{
-                                if(o.b_return_new){
-                                    return `
-                                    return new ${o_vec_class.s_name}(
-                                        ${o_vec_class.a_a_s_name_component.map(
-                                            a_s_name_component =>{
-                                                return `this.${a_s_name_component[0]} ${o.s_operator} o_vec.${a_s_name_component[0]}`
-                                            }
-                                        ).join(',\n')}
-                                    )
-                                    `
-                                }
-                                if(!o.b_return_new){
-                                    return `
-                                    ${o_vec_class.a_a_s_name_component.map(
-                                        a_s_name_component =>{
-                                            return `this.${a_s_name_component[0]} ${o.s_operator} o_vec.${a_s_name_component[0]}`
-                                        }
-                                    ).join('\n')}
-                                    return this
-                                    `
-                                }
-                            })()}
-
-                        }
+                        ${a_s_valuereceivers_s_component_operation.map(
+                            a_s=>a_s.join('=')
+                        ).join(';')}
+                        return this
                     `
                 }
-        
+            })()}
+        }
+
+        `
+    } 
+}
+let a_o_vec_function = [
+
+    // all the functions that can return a new vector or be applied to the current vector itself
+    ...[false, true].map(
+        b =>{
+            return [
+                [
+                    ['comps_to_int', 'to_int'], 
+                    (o_vec_class)=>{return ''},
+                    (o_vec_class)=>{return `
+                    let b_all = arguments.length == 0
+                    let a_v_arg = Array.from(arguments);
+                    `},
+                    (o_vec_class) => {
+                        return o_vec_class.a_a_s_name_component.map(
+                            a_s_name_component =>{
+                                return [
+                                    `this.${a_s_name_component[0]}`, 
+                                    `(b_all || a_v_arg?.some(v=>${JSON.stringify(a_s_name_component)}.includes(v))) ? parseInt(this.${a_s_name_component[0]}): this.${a_s_name_component[0]}`
+                                ] 
+                            }
+                        )
+                    },
+
+                ],
+                ...[
+                    {a_s_name: ['add' ], s_operator: '+'},
+                    {a_s_name: ['sub' , 'subtract'], s_operator: '-'},
+                    {a_s_name: ['mul' , 'multiply'], s_operator: '*'},
+                    {a_s_name: ['div' , 'divide'], s_operator: '/'},
+                ].map(
+                    o=>{
+                        return [
+                            o.a_s_name, 
+                            (o_vec_class)=>{return 'v'},
+                            (o_vec_class)=>{return `const o_vec = (typeof v == 'number') ? new ${o_vec_class.s_name}(...arguments) : v`},
+                            (o_vec_class) => {
+                                return o_vec_class.a_a_s_name_component.map(
+                                    a_s_name_component =>{
+                                        return [
+                                            `this.${a_s_name_component[0]}`, 
+                                            `this.${a_s_name_component[0]} ${o.s_operator} o_vec.${a_s_name_component[0]}`
+                                        ] 
+                                    }
+                                )
+                            }
+                        ]
+                    }
+                ),
+                [
+                    ['comps_to_int', 'to_int'],
+                    (o_vec_class)=>{return ''},
+                    (o_vec_class)=>{return `
+                    let b_all = arguments.length == 0
+                    let a_v_arg = Array.from(arguments);
+                    `},
+                    (o_vec_class) => {
+                        return o_vec_class.a_a_s_name_component.map(
+                            a_s_name_component =>{
+                                return [
+                                    `this.${a_s_name_component[0]}`, 
+                                    `(b_all || a_v_arg?.some(v=>${JSON.stringify(a_s_name_component)}.includes(v))) ? parseInt(this.${a_s_name_component[0]}): this.${a_s_name_component[0]}`
+                                ] 
+                            }
+                        )
+                    },
+                ],
+                [
+                    ['norm', 'normalize'],
+                    (o_vec_class)=>{return ''},
+                    (o_vec_class)=>{return `
+                    const n_length = this.length();
+                    `},
+                    (o_vec_class) => {
+                        return o_vec_class.a_a_s_name_component.map(
+                            a_s_name_component =>{
+                                return [
+                                    `this.${a_s_name_component[0]}`, 
+                                    `this.${a_s_name_component[0]} / n_length`
+                                ] 
+                            }
+                        )
+                    },
+                ],
+                [
+                    ['fract'],
+                    (o_vec_class)=>{return ''},
+                    (o_vec_class)=>{return ``},
+                    (o_vec_class) => {
+                        return o_vec_class.a_a_s_name_component.map(
+                            a_s_name_component =>{
+                                return [
+                                    `this.${a_s_name_component[0]}`, 
+                                    `this.${a_s_name_component[0]} % 1`
+                                ] 
+                            }
+                        )
+                    },
+                ],
+                [
+                    ['mod'],
+                    (o_vec_class)=>{return 'v'},
+                    (o_vec_class)=>{return `
+                    const o_vec = (typeof v == 'number') ? new ${o_vec_class.s_name}(...arguments) : v
+                    `},
+                    (o_vec_class) => {
+                        return o_vec_class.a_a_s_name_component.map(
+                            a_s_name_component =>{
+                                return [
+                                    `this.${a_s_name_component[0]}`, 
+                                    `this.${a_s_name_component[0]} % o_vec.${a_s_name_component[0]}`
+                                ] 
+                            }
+                        )
+                    },
+                ],
+                
+                [
+                    ['clamp', 'clamp_minmax'], 
+                    
+                    (o_vec_class)=>{return `
+                    o_vec_min, 
+                    o_vec_max
+                    `},
+                    (o_vec_class)=>{return ``},
+                    (o_vec_class) => {
+                        return o_vec_class.a_a_s_name_component.map(
+                            a_s_name_component =>{
+                                return [
+                                    `this.${a_s_name_component[0]}`, 
+                                    `
+                                    f_n_clamped(
+                                        this.${a_s_name_component[0]}, 
+                                        o_vec_min.${a_s_name_component[0]},
+                                        o_vec_max.${a_s_name_component[0]},
+                                    )`
+
+                                ] 
+                            }
+                        )
+                    },
+
+                ],
+
+                                
+                [
+                    ['wrap', 'wrap_minmax'], 
+                    
+                    (o_vec_class)=>{return `
+                    o_vec_min, 
+                    o_vec_max
+                    `},
+                    (o_vec_class)=>{return ``},
+                    (o_vec_class) => {
+                        return o_vec_class.a_a_s_name_component.map(
+                            a_s_name_component =>{
+                                return [
+                                    `this.${a_s_name_component[0]}`, 
+                                    `
+                                    f_n_wrapped(
+                                        this.${a_s_name_component[0]}, 
+                                        o_vec_min.${a_s_name_component[0]},
+                                        o_vec_max.${a_s_name_component[0]},
+                                    )`
+
+                                ] 
+                            }
+                        )
+                    },
+
+                ]
+
+            ].map(
+                a_v =>{
+                    let a_s_name = a_v[0]
+                    if(b){
+                        a_s_name = a_s_name.map(s=>`${s}eq`)
+                    }
+                    return new O_vec_funtion(
+                        a_s_name,
+                        f_f_s_f__from_o_vec_class__from_params(
+                            a_v[1],
+                            a_v[2],
+                            a_v[3],
+                            !b, 
+                        ),
+                    )
+                }
             )
         }
-    ),
-    new O_vec_funtion(
-        ['comps_to_int', 'to_int'], 
-        function(o_vec_class){
-            return `
-            function(){
-                let b_all = arguments.length == 0
-                let a_v_arg = Array.from(arguments);
-                return new ${o_vec_class.s_name}(
-                    ${o_vec_class.a_a_s_name_component.map(
-                        a_s_name_component =>{
-                            return `(b_all || a_v_arg?.some(v=>${JSON.stringify(a_s_name_component)}.includes(v))) ? parseInt(this.${a_s_name_component[0]}): this.${a_s_name_component[0]}`
-                        }
-                    ).join('\n,')}
-                )
-            }
+    ).flat(),
 
-            `
-        } 
-    ),
+
     new O_vec_funtion(
         ['to_index', 'to_idx'], 
         function(o_vec_class){
@@ -198,70 +357,18 @@ let a_o_vec_function = [
         } 
     ), 
     new O_vec_funtion(
-        ['norm', 'normalize'], 
-        function(o_vec_class){
-            return `
-            function(){
-                const n_length = this.length();
-                return new ${o_vec_class.s_name}(
-                    ${o_vec_class.a_a_s_name_component.map(
-                        a_s_name_component =>{
-                            return `this.${a_s_name_component[0]} / n_length`
-                        }
-                    ).join(',')}
-                )
-
-            }
-
-            `
-        } 
-    ),
-    new O_vec_funtion(
-        ['normeq', 'normalizeeq'], 
-        function(o_vec_class){
-            return `
-            function(){
-                const n_length = this.length();
-                ${o_vec_class.a_a_s_name_component.map(
-                    a_s_name_component =>{
-                        return `this.${a_s_name_component[0]} = this.${a_s_name_component[0]} / n_length`
-                    }
-                ).join('\n')}
-                return this
-            }
-
-            `
-        } 
-    ),
-    new O_vec_funtion(
-        ['fract'], 
+        ['clone', 'cln'], 
         function(o_vec_class){
             return `
             function(){
                 return new ${o_vec_class.s_name}(
                     ${o_vec_class.a_a_s_name_component.map(
                         a_s_name_component =>{
-                            return `this.${a_s_name_component[0]} % 1`
+                            return `this.${a_s_name_component[0]}`
                         }
                     ).join(',')}
                 )
 
-            }
-
-            `
-        } 
-    ),
-    new O_vec_funtion(
-        ['fracteq'], 
-        function(o_vec_class){
-            return `
-            function(){
-                ${o_vec_class.a_a_s_name_component.map(
-                    a_s_name_component =>{
-                        return `this.${a_s_name_component[0]} = this.${a_s_name_component[0]} % 1`
-                    }
-                ).join('\n')}
-                return this
             }
 
             `
@@ -374,32 +481,7 @@ let a_o_vec_function = [
             
         }
     ),
-    // automatic '...eq' functions
-    // maybe this is not very performant but i am lazy 
-    ...[
-        'comps_to_inteq', 'to_inteq'
-    ].map(s_name_function_with_eq_suffix=>{
-        let s_name_function = s_name_function_with_eq_suffix.slice(0, -2);
-        return new O_vec_funtion(
-            [s_name_function_with_eq_suffix], 
-            function(o_vec_class){
-                return `
-                function(){
-                    let o_vec = this.${s_name_function}(...arguments);
-                    ${o_vec_class.a_a_s_name_component.map(
-                        a_s_name_component =>{
-                            return `this.${a_s_name_component[0]} = o_vec.${a_s_name_component[0]}`
-                        }
-                    ).join('\n')}
-                    return this
-    
-                }
-    
-                `
-            } 
-        )
 
-    })
 
 
 ]
@@ -458,6 +540,14 @@ class ${o_vec_class.s_name}{
         ).join(',\n')}
     ){
 
+        if(typeof ${o_vec_class.a_a_s_name_component[0][0]} === 'object'){
+            let o = ${o_vec_class.a_a_s_name_component[0][0]}
+            ${o_vec_class.a_a_s_name_component.map(
+                a_s=>{
+                    return `${a_s[0]} = o.${a_s[0]}`
+                }
+            ).join('\n')}
+        }
 
         ${o_vec_class.a_a_s_name_component.map(
             (a_s_name_component, n_idx) =>{
@@ -540,6 +630,7 @@ class ${o_vec_class.s_name}{
 }
 ${o_vec_class.s_name}.n_tau = Math.PI * 2
 ${a_o_vec_function.map(o_vec_function=>{
+    console.log(o_vec_function)
     if(!o_vec_function.f_b_generate(o_vec_class)){
         return ''
     }
@@ -569,4 +660,11 @@ export {${o_vec_class.s_name}}
 }
 
 let a_s_js = a_o_vec_class.map(o=>f_s_js__from_o_vec_class(o)).join('\n');
-await Deno.writeTextFile('created_dynamic_generated.js', a_s_js);
+await Deno.writeTextFile('created_dynamic_generated.js',
+`
+import { 
+    f_n_wrapped,
+    f_n_clamped
+} from './module.js'
+${a_s_js}`
+);
