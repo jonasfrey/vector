@@ -132,6 +132,22 @@ O_vec1.n_tau = Math.PI * 2
     
     
 
+    O_vec1.prototype.abs = 
+        function(){
+            
+                    let b_all = arguments.length == 0
+                    let a_v_arg = Array.from(arguments);
+                    
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.absolute = O_vec1.prototype.abs
+    
+    
+
     O_vec1.prototype.norm = 
         function(){
             
@@ -304,6 +320,23 @@ O_vec1.n_tau = Math.PI * 2
 
         
     O_vec1.prototype.to_inteq = O_vec1.prototype.comps_to_inteq
+    
+    
+
+    O_vec1.prototype.abseq = 
+        function(){
+            
+                    let b_all = arguments.length == 0
+                    let a_v_arg = Array.from(arguments);
+                    
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.absoluteeq = O_vec1.prototype.abseq
     
     
 
@@ -747,6 +780,22 @@ O_vec2.n_tau = Math.PI * 2
     
     
 
+    O_vec2.prototype.abs = 
+        function(){
+            
+                    let b_all = arguments.length == 0
+                    let a_v_arg = Array.from(arguments);
+                    
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.abs(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.absolute = O_vec2.prototype.abs
+    
+    
+
     O_vec2.prototype.norm = 
         function(){
             
@@ -929,6 +978,23 @@ O_vec2.n_tau = Math.PI * 2
 
         
     O_vec2.prototype.to_inteq = O_vec2.prototype.comps_to_inteq
+    
+    
+
+    O_vec2.prototype.abseq = 
+        function(){
+            
+                    let b_all = arguments.length == 0
+                    let a_v_arg = Array.from(arguments);
+                    
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.abs(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.absoluteeq = O_vec2.prototype.abseq
     
     
 
@@ -1549,6 +1615,22 @@ O_vec3.n_tau = Math.PI * 2
     
     
 
+    O_vec3.prototype.abs = 
+        function(){
+            
+                    let b_all = arguments.length == 0
+                    let a_v_arg = Array.from(arguments);
+                    
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.abs(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.abs(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.absolute = O_vec3.prototype.abs
+    
+    
+
     O_vec3.prototype.norm = 
         function(){
             
@@ -1741,6 +1823,23 @@ O_vec3.n_tau = Math.PI * 2
 
         
     O_vec3.prototype.to_inteq = O_vec3.prototype.comps_to_inteq
+    
+    
+
+    O_vec3.prototype.abseq = 
+        function(){
+            
+                    let b_all = arguments.length == 0
+                    let a_v_arg = Array.from(arguments);
+                    
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.abs(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.abs(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.absoluteeq = O_vec3.prototype.abseq
     
     
 
@@ -3528,6 +3627,22 @@ O_vec4.n_tau = Math.PI * 2
     
     
 
+    O_vec4.prototype.abs = 
+        function(){
+            
+                    let b_all = arguments.length == 0
+                    let a_v_arg = Array.from(arguments);
+                    
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.abs(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.abs(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.abs(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.absolute = O_vec4.prototype.abs
+    
+    
+
     O_vec4.prototype.norm = 
         function(){
             
@@ -3730,6 +3845,23 @@ O_vec4.n_tau = Math.PI * 2
 
         
     O_vec4.prototype.to_inteq = O_vec4.prototype.comps_to_inteq
+    
+    
+
+    O_vec4.prototype.abseq = 
+        function(){
+            
+                    let b_all = arguments.length == 0
+                    let a_v_arg = Array.from(arguments);
+                    
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.abs(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.abs(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.abs(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.absoluteeq = O_vec4.prototype.abseq
     
     
 

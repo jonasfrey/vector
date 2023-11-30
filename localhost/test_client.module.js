@@ -436,6 +436,26 @@ await f_deno_test_all_and_print_summary(
             );
             //readme.md:end
         }),
+        f_deno_test("abs", () => {
+            //readme.md:start
+            //md: ### abs, get a component or all components as absolute number
+
+            let o_scl = new O_vec2(-4,-3);
+            f_assert_equals(
+                o_scl.abs('n_x').toString(),
+                new O_vec2(4,-3).toString()
+            );
+            f_assert_equals(
+                o_scl.abs().toString(),
+                new O_vec2(4,3).toString()
+            );
+            o_scl.abseq()
+            f_assert_equals(
+                o_scl.toString(),
+                new O_vec2(4,3).toString()
+            );
+            //readme.md:end
+        }),
 
 
 
