@@ -456,6 +456,28 @@ await f_deno_test_all_and_print_summary(
             );
             //readme.md:end
         }),
+        f_deno_test('math functions that require only one argument', ()=>{
+            let o = new O_vec2(1.23, -4.56);
+            //readme.md:start
+            //md: ### all math functions that require only one argument are available on a vector, 
+            //md: for example Math.sin() => o_vec.sin() -> new O_vec2(Math.sin(o_vec.n_x), Math.cos(o_vec.n_y))
+            //md: for example Math.ceil() => o_vec.ceil() -> new O_vec2(Math.ceil(o_vec.n_x), Math.cos(o_vec.n_y))
+            //md: and so on
+            Object.getOwnPropertyNames(Math).map(s=>{
+
+                if(typeof Math[s] === 'function' && Math[s].length === 1){
+                    return s;
+                }
+            }).filter(v=>v).map(
+                (s)=>{
+                    let f = Math[s];
+                    return f_assert_equals(
+                        o[s](),
+                        new O_vec2(f(o.n_x), f(o.n_y)),
+                    );
+                }
+            );
+        })
 
 
 

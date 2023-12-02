@@ -1,4 +1,4 @@
-<!-- {"s_msg":"this file was automatically generated","s_by":"f_generate_markdown.module.js","s_ts_created":"Thu Nov 30 2023 23:12:09 GMT+0100 (Central European Standard Time)","n_ts_created":1701382329876} -->
+<!-- {"s_msg":"this file was automatically generated","s_by":"f_generate_markdown.module.js","s_ts_created":"Sat Dec 02 2023 22:39:15 GMT+0100 (Central European Standard Time)","n_ts_created":1701553155507} -->
 ![f_o_vec logo](./f_o_vec_library.png)
 # f_o_vec
 this is a small library that handles vectors in javascript, at least as good as it can be done UwU
@@ -384,4 +384,31 @@ unfortunately there is no pythagorean quituple
                 o_scl.toString(),
                 new O_vec2(4,3).toString()
             );
+```
+### all math functions that require only one argument are available on a vector,
+for example Math.sin() => o_vec.sin() -> new O_vec2(Math.sin(o_vec.n_x), Math.cos(o_vec.n_y))
+for example Math.ceil() => o_vec.ceil() -> new O_vec2(Math.ceil(o_vec.n_x), Math.cos(o_vec.n_y))
+and so on
+```javascript
+            Object.getOwnPropertyNames(Math).map(s=>{
+
+                if(typeof Math[s] === 'function' && Math[s].length === 1){
+                    return s;
+                }
+            }).filter(v=>v).map(
+                (s)=>{
+                    let f = Math[s];
+                    return f_assert_equals(
+                        o[s](),
+                        new O_vec2(f(o.n_x), f(o.n_y)),
+                    );
+                }
+            );
+        })
+
+
+
+    ]
+)
+
 ```

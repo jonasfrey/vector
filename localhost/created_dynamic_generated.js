@@ -48,6 +48,454 @@ class O_vec1{
 }
 O_vec1.n_tau = Math.PI * 2
 
+    O_vec1.prototype.math_abs = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.abs = O_vec1.prototype.math_abs
+    
+    
+
+    O_vec1.prototype.math_acos = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acos(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.acos = O_vec1.prototype.math_acos
+    
+    
+
+    O_vec1.prototype.math_acosh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acosh(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.acosh = O_vec1.prototype.math_acosh
+    
+    
+
+    O_vec1.prototype.math_asin = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asin(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.asin = O_vec1.prototype.math_asin
+    
+    
+
+    O_vec1.prototype.math_asinh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asinh(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.asinh = O_vec1.prototype.math_asinh
+    
+    
+
+    O_vec1.prototype.math_atan = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atan(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.atan = O_vec1.prototype.math_atan
+    
+    
+
+    O_vec1.prototype.math_atanh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atanh(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.atanh = O_vec1.prototype.math_atanh
+    
+    
+
+    O_vec1.prototype.math_ceil = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.ceil(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.ceil = O_vec1.prototype.math_ceil
+    
+    
+
+    O_vec1.prototype.math_cbrt = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cbrt(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.cbrt = O_vec1.prototype.math_cbrt
+    
+    
+
+    O_vec1.prototype.math_expm1 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.expm1(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.expm1 = O_vec1.prototype.math_expm1
+    
+    
+
+    O_vec1.prototype.math_clz32 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.clz32(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.clz32 = O_vec1.prototype.math_clz32
+    
+    
+
+    O_vec1.prototype.math_cos = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cos(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.cos = O_vec1.prototype.math_cos
+    
+    
+
+    O_vec1.prototype.math_cosh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cosh(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.cosh = O_vec1.prototype.math_cosh
+    
+    
+
+    O_vec1.prototype.math_exp = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.exp(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.exp = O_vec1.prototype.math_exp
+    
+    
+
+    O_vec1.prototype.math_floor = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.floor(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.floor = O_vec1.prototype.math_floor
+    
+    
+
+    O_vec1.prototype.math_fround = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.fround(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.fround = O_vec1.prototype.math_fround
+    
+    
+
+    O_vec1.prototype.math_log = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.log = O_vec1.prototype.math_log
+    
+    
+
+    O_vec1.prototype.math_log1p = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log1p(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.log1p = O_vec1.prototype.math_log1p
+    
+    
+
+    O_vec1.prototype.math_log2 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log2(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.log2 = O_vec1.prototype.math_log2
+    
+    
+
+    O_vec1.prototype.math_log10 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log10(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.log10 = O_vec1.prototype.math_log10
+    
+    
+
+    O_vec1.prototype.math_round = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.round(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.round = O_vec1.prototype.math_round
+    
+    
+
+    O_vec1.prototype.math_sign = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sign(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.sign = O_vec1.prototype.math_sign
+    
+    
+
+    O_vec1.prototype.math_sin = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sin(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.sin = O_vec1.prototype.math_sin
+    
+    
+
+    O_vec1.prototype.math_sinh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sinh(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.sinh = O_vec1.prototype.math_sinh
+    
+    
+
+    O_vec1.prototype.math_sqrt = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sqrt(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.sqrt = O_vec1.prototype.math_sqrt
+    
+    
+
+    O_vec1.prototype.math_tan = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tan(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.tan = O_vec1.prototype.math_tan
+    
+    
+
+    O_vec1.prototype.math_tanh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tanh(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.tanh = O_vec1.prototype.math_tanh
+    
+    
+
+    O_vec1.prototype.math_trunc = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec1(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.trunc(this.n_x): this.n_x
+                    )
+        }
+
+        
+    O_vec1.prototype.trunc = O_vec1.prototype.math_trunc
+    
+    
+
     O_vec1.prototype.comps_to_int = 
         function(){
             
@@ -230,6 +678,482 @@ O_vec1.n_tau = Math.PI * 2
 
         
     O_vec1.prototype.wrap_minmax = O_vec1.prototype.wrap
+    
+    
+
+    O_vec1.prototype.math_abseq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.abseq = O_vec1.prototype.math_abseq
+    
+    
+
+    O_vec1.prototype.math_acoseq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acos(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.acoseq = O_vec1.prototype.math_acoseq
+    
+    
+
+    O_vec1.prototype.math_acosheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acosh(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.acosheq = O_vec1.prototype.math_acosheq
+    
+    
+
+    O_vec1.prototype.math_asineq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asin(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.asineq = O_vec1.prototype.math_asineq
+    
+    
+
+    O_vec1.prototype.math_asinheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asinh(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.asinheq = O_vec1.prototype.math_asinheq
+    
+    
+
+    O_vec1.prototype.math_ataneq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atan(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.ataneq = O_vec1.prototype.math_ataneq
+    
+    
+
+    O_vec1.prototype.math_atanheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atanh(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.atanheq = O_vec1.prototype.math_atanheq
+    
+    
+
+    O_vec1.prototype.math_ceileq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.ceil(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.ceileq = O_vec1.prototype.math_ceileq
+    
+    
+
+    O_vec1.prototype.math_cbrteq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cbrt(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.cbrteq = O_vec1.prototype.math_cbrteq
+    
+    
+
+    O_vec1.prototype.math_expm1eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.expm1(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.expm1eq = O_vec1.prototype.math_expm1eq
+    
+    
+
+    O_vec1.prototype.math_clz32eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.clz32(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.clz32eq = O_vec1.prototype.math_clz32eq
+    
+    
+
+    O_vec1.prototype.math_coseq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cos(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.coseq = O_vec1.prototype.math_coseq
+    
+    
+
+    O_vec1.prototype.math_cosheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cosh(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.cosheq = O_vec1.prototype.math_cosheq
+    
+    
+
+    O_vec1.prototype.math_expeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.exp(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.expeq = O_vec1.prototype.math_expeq
+    
+    
+
+    O_vec1.prototype.math_flooreq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.floor(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.flooreq = O_vec1.prototype.math_flooreq
+    
+    
+
+    O_vec1.prototype.math_froundeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.fround(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.froundeq = O_vec1.prototype.math_froundeq
+    
+    
+
+    O_vec1.prototype.math_logeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.logeq = O_vec1.prototype.math_logeq
+    
+    
+
+    O_vec1.prototype.math_log1peq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log1p(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.log1peq = O_vec1.prototype.math_log1peq
+    
+    
+
+    O_vec1.prototype.math_log2eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log2(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.log2eq = O_vec1.prototype.math_log2eq
+    
+    
+
+    O_vec1.prototype.math_log10eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log10(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.log10eq = O_vec1.prototype.math_log10eq
+    
+    
+
+    O_vec1.prototype.math_roundeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.round(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.roundeq = O_vec1.prototype.math_roundeq
+    
+    
+
+    O_vec1.prototype.math_signeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sign(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.signeq = O_vec1.prototype.math_signeq
+    
+    
+
+    O_vec1.prototype.math_sineq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sin(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.sineq = O_vec1.prototype.math_sineq
+    
+    
+
+    O_vec1.prototype.math_sinheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sinh(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.sinheq = O_vec1.prototype.math_sinheq
+    
+    
+
+    O_vec1.prototype.math_sqrteq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sqrt(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.sqrteq = O_vec1.prototype.math_sqrteq
+    
+    
+
+    O_vec1.prototype.math_taneq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tan(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.taneq = O_vec1.prototype.math_taneq
+    
+    
+
+    O_vec1.prototype.math_tanheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tanh(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.tanheq = O_vec1.prototype.math_tanheq
+    
+    
+
+    O_vec1.prototype.math_trunceq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.trunc(this.n_x): this.n_x
+                        return this
+                    
+        }
+
+        
+    O_vec1.prototype.trunceq = O_vec1.prototype.math_trunceq
     
     
 
@@ -696,6 +1620,454 @@ get yy(){
 }
 O_vec2.n_tau = Math.PI * 2
 
+    O_vec2.prototype.math_abs = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.abs(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.abs = O_vec2.prototype.math_abs
+    
+    
+
+    O_vec2.prototype.math_acos = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acos(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.acos(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.acos = O_vec2.prototype.math_acos
+    
+    
+
+    O_vec2.prototype.math_acosh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acosh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.acosh(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.acosh = O_vec2.prototype.math_acosh
+    
+    
+
+    O_vec2.prototype.math_asin = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asin(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.asin(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.asin = O_vec2.prototype.math_asin
+    
+    
+
+    O_vec2.prototype.math_asinh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asinh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.asinh(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.asinh = O_vec2.prototype.math_asinh
+    
+    
+
+    O_vec2.prototype.math_atan = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atan(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.atan(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.atan = O_vec2.prototype.math_atan
+    
+    
+
+    O_vec2.prototype.math_atanh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atanh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.atanh(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.atanh = O_vec2.prototype.math_atanh
+    
+    
+
+    O_vec2.prototype.math_ceil = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.ceil(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.ceil(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.ceil = O_vec2.prototype.math_ceil
+    
+    
+
+    O_vec2.prototype.math_cbrt = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cbrt(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cbrt(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.cbrt = O_vec2.prototype.math_cbrt
+    
+    
+
+    O_vec2.prototype.math_expm1 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.expm1(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.expm1(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.expm1 = O_vec2.prototype.math_expm1
+    
+    
+
+    O_vec2.prototype.math_clz32 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.clz32(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.clz32(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.clz32 = O_vec2.prototype.math_clz32
+    
+    
+
+    O_vec2.prototype.math_cos = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cos(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cos(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.cos = O_vec2.prototype.math_cos
+    
+    
+
+    O_vec2.prototype.math_cosh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cosh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cosh(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.cosh = O_vec2.prototype.math_cosh
+    
+    
+
+    O_vec2.prototype.math_exp = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.exp(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.exp(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.exp = O_vec2.prototype.math_exp
+    
+    
+
+    O_vec2.prototype.math_floor = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.floor(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.floor(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.floor = O_vec2.prototype.math_floor
+    
+    
+
+    O_vec2.prototype.math_fround = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.fround(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.fround(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.fround = O_vec2.prototype.math_fround
+    
+    
+
+    O_vec2.prototype.math_log = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.log = O_vec2.prototype.math_log
+    
+    
+
+    O_vec2.prototype.math_log1p = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log1p(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log1p(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.log1p = O_vec2.prototype.math_log1p
+    
+    
+
+    O_vec2.prototype.math_log2 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log2(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log2(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.log2 = O_vec2.prototype.math_log2
+    
+    
+
+    O_vec2.prototype.math_log10 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log10(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log10(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.log10 = O_vec2.prototype.math_log10
+    
+    
+
+    O_vec2.prototype.math_round = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.round(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.round(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.round = O_vec2.prototype.math_round
+    
+    
+
+    O_vec2.prototype.math_sign = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sign(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sign(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.sign = O_vec2.prototype.math_sign
+    
+    
+
+    O_vec2.prototype.math_sin = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sin(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sin(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.sin = O_vec2.prototype.math_sin
+    
+    
+
+    O_vec2.prototype.math_sinh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sinh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sinh(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.sinh = O_vec2.prototype.math_sinh
+    
+    
+
+    O_vec2.prototype.math_sqrt = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sqrt(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sqrt(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.sqrt = O_vec2.prototype.math_sqrt
+    
+    
+
+    O_vec2.prototype.math_tan = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tan(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.tan(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.tan = O_vec2.prototype.math_tan
+    
+    
+
+    O_vec2.prototype.math_tanh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tanh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.tanh(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.tanh = O_vec2.prototype.math_tanh
+    
+    
+
+    O_vec2.prototype.math_trunc = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec2(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.trunc(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.trunc(this.n_y): this.n_y
+                    )
+        }
+
+        
+    O_vec2.prototype.trunc = O_vec2.prototype.math_trunc
+    
+    
+
     O_vec2.prototype.comps_to_int = 
         function(){
             
@@ -888,6 +2260,482 @@ O_vec2.n_tau = Math.PI * 2
 
         
     O_vec2.prototype.wrap_minmax = O_vec2.prototype.wrap
+    
+    
+
+    O_vec2.prototype.math_abseq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.abs(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.abseq = O_vec2.prototype.math_abseq
+    
+    
+
+    O_vec2.prototype.math_acoseq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acos(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.acos(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.acoseq = O_vec2.prototype.math_acoseq
+    
+    
+
+    O_vec2.prototype.math_acosheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acosh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.acosh(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.acosheq = O_vec2.prototype.math_acosheq
+    
+    
+
+    O_vec2.prototype.math_asineq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asin(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.asin(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.asineq = O_vec2.prototype.math_asineq
+    
+    
+
+    O_vec2.prototype.math_asinheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asinh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.asinh(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.asinheq = O_vec2.prototype.math_asinheq
+    
+    
+
+    O_vec2.prototype.math_ataneq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atan(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.atan(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.ataneq = O_vec2.prototype.math_ataneq
+    
+    
+
+    O_vec2.prototype.math_atanheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atanh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.atanh(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.atanheq = O_vec2.prototype.math_atanheq
+    
+    
+
+    O_vec2.prototype.math_ceileq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.ceil(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.ceil(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.ceileq = O_vec2.prototype.math_ceileq
+    
+    
+
+    O_vec2.prototype.math_cbrteq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cbrt(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cbrt(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.cbrteq = O_vec2.prototype.math_cbrteq
+    
+    
+
+    O_vec2.prototype.math_expm1eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.expm1(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.expm1(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.expm1eq = O_vec2.prototype.math_expm1eq
+    
+    
+
+    O_vec2.prototype.math_clz32eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.clz32(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.clz32(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.clz32eq = O_vec2.prototype.math_clz32eq
+    
+    
+
+    O_vec2.prototype.math_coseq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cos(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cos(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.coseq = O_vec2.prototype.math_coseq
+    
+    
+
+    O_vec2.prototype.math_cosheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cosh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cosh(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.cosheq = O_vec2.prototype.math_cosheq
+    
+    
+
+    O_vec2.prototype.math_expeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.exp(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.exp(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.expeq = O_vec2.prototype.math_expeq
+    
+    
+
+    O_vec2.prototype.math_flooreq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.floor(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.floor(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.flooreq = O_vec2.prototype.math_flooreq
+    
+    
+
+    O_vec2.prototype.math_froundeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.fround(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.fround(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.froundeq = O_vec2.prototype.math_froundeq
+    
+    
+
+    O_vec2.prototype.math_logeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.logeq = O_vec2.prototype.math_logeq
+    
+    
+
+    O_vec2.prototype.math_log1peq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log1p(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log1p(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.log1peq = O_vec2.prototype.math_log1peq
+    
+    
+
+    O_vec2.prototype.math_log2eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log2(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log2(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.log2eq = O_vec2.prototype.math_log2eq
+    
+    
+
+    O_vec2.prototype.math_log10eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log10(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log10(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.log10eq = O_vec2.prototype.math_log10eq
+    
+    
+
+    O_vec2.prototype.math_roundeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.round(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.round(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.roundeq = O_vec2.prototype.math_roundeq
+    
+    
+
+    O_vec2.prototype.math_signeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sign(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sign(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.signeq = O_vec2.prototype.math_signeq
+    
+    
+
+    O_vec2.prototype.math_sineq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sin(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sin(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.sineq = O_vec2.prototype.math_sineq
+    
+    
+
+    O_vec2.prototype.math_sinheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sinh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sinh(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.sinheq = O_vec2.prototype.math_sinheq
+    
+    
+
+    O_vec2.prototype.math_sqrteq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sqrt(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sqrt(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.sqrteq = O_vec2.prototype.math_sqrteq
+    
+    
+
+    O_vec2.prototype.math_taneq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tan(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.tan(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.taneq = O_vec2.prototype.math_taneq
+    
+    
+
+    O_vec2.prototype.math_tanheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tanh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.tanh(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.tanheq = O_vec2.prototype.math_tanheq
+    
+    
+
+    O_vec2.prototype.math_trunceq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.trunc(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.trunc(this.n_y): this.n_y
+                        return this
+                    
+        }
+
+        
+    O_vec2.prototype.trunceq = O_vec2.prototype.math_trunceq
     
     
 
@@ -1531,6 +3379,454 @@ get zzz(){
 }
 O_vec3.n_tau = Math.PI * 2
 
+    O_vec3.prototype.math_abs = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.abs(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.abs(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.abs = O_vec3.prototype.math_abs
+    
+    
+
+    O_vec3.prototype.math_acos = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acos(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.acos(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.acos(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.acos = O_vec3.prototype.math_acos
+    
+    
+
+    O_vec3.prototype.math_acosh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acosh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.acosh(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.acosh(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.acosh = O_vec3.prototype.math_acosh
+    
+    
+
+    O_vec3.prototype.math_asin = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asin(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.asin(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.asin(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.asin = O_vec3.prototype.math_asin
+    
+    
+
+    O_vec3.prototype.math_asinh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asinh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.asinh(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.asinh(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.asinh = O_vec3.prototype.math_asinh
+    
+    
+
+    O_vec3.prototype.math_atan = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atan(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.atan(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.atan(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.atan = O_vec3.prototype.math_atan
+    
+    
+
+    O_vec3.prototype.math_atanh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atanh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.atanh(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.atanh(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.atanh = O_vec3.prototype.math_atanh
+    
+    
+
+    O_vec3.prototype.math_ceil = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.ceil(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.ceil(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.ceil(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.ceil = O_vec3.prototype.math_ceil
+    
+    
+
+    O_vec3.prototype.math_cbrt = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cbrt(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cbrt(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.cbrt(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.cbrt = O_vec3.prototype.math_cbrt
+    
+    
+
+    O_vec3.prototype.math_expm1 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.expm1(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.expm1(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.expm1(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.expm1 = O_vec3.prototype.math_expm1
+    
+    
+
+    O_vec3.prototype.math_clz32 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.clz32(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.clz32(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.clz32(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.clz32 = O_vec3.prototype.math_clz32
+    
+    
+
+    O_vec3.prototype.math_cos = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cos(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cos(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.cos(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.cos = O_vec3.prototype.math_cos
+    
+    
+
+    O_vec3.prototype.math_cosh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cosh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cosh(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.cosh(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.cosh = O_vec3.prototype.math_cosh
+    
+    
+
+    O_vec3.prototype.math_exp = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.exp(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.exp(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.exp(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.exp = O_vec3.prototype.math_exp
+    
+    
+
+    O_vec3.prototype.math_floor = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.floor(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.floor(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.floor(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.floor = O_vec3.prototype.math_floor
+    
+    
+
+    O_vec3.prototype.math_fround = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.fround(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.fround(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.fround(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.fround = O_vec3.prototype.math_fround
+    
+    
+
+    O_vec3.prototype.math_log = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.log = O_vec3.prototype.math_log
+    
+    
+
+    O_vec3.prototype.math_log1p = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log1p(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log1p(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log1p(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.log1p = O_vec3.prototype.math_log1p
+    
+    
+
+    O_vec3.prototype.math_log2 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log2(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log2(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log2(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.log2 = O_vec3.prototype.math_log2
+    
+    
+
+    O_vec3.prototype.math_log10 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log10(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log10(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log10(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.log10 = O_vec3.prototype.math_log10
+    
+    
+
+    O_vec3.prototype.math_round = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.round(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.round(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.round(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.round = O_vec3.prototype.math_round
+    
+    
+
+    O_vec3.prototype.math_sign = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sign(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sign(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sign(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.sign = O_vec3.prototype.math_sign
+    
+    
+
+    O_vec3.prototype.math_sin = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sin(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sin(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sin(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.sin = O_vec3.prototype.math_sin
+    
+    
+
+    O_vec3.prototype.math_sinh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sinh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sinh(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sinh(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.sinh = O_vec3.prototype.math_sinh
+    
+    
+
+    O_vec3.prototype.math_sqrt = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sqrt(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sqrt(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sqrt(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.sqrt = O_vec3.prototype.math_sqrt
+    
+    
+
+    O_vec3.prototype.math_tan = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tan(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.tan(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.tan(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.tan = O_vec3.prototype.math_tan
+    
+    
+
+    O_vec3.prototype.math_tanh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tanh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.tanh(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.tanh(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.tanh = O_vec3.prototype.math_tanh
+    
+    
+
+    O_vec3.prototype.math_trunc = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec3(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.trunc(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.trunc(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.trunc(this.n_z): this.n_z
+                    )
+        }
+
+        
+    O_vec3.prototype.trunc = O_vec3.prototype.math_trunc
+    
+    
+
     O_vec3.prototype.comps_to_int = 
         function(){
             
@@ -1733,6 +4029,482 @@ O_vec3.n_tau = Math.PI * 2
 
         
     O_vec3.prototype.wrap_minmax = O_vec3.prototype.wrap
+    
+    
+
+    O_vec3.prototype.math_abseq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.abs(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.abs(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.abseq = O_vec3.prototype.math_abseq
+    
+    
+
+    O_vec3.prototype.math_acoseq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acos(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.acos(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.acos(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.acoseq = O_vec3.prototype.math_acoseq
+    
+    
+
+    O_vec3.prototype.math_acosheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acosh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.acosh(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.acosh(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.acosheq = O_vec3.prototype.math_acosheq
+    
+    
+
+    O_vec3.prototype.math_asineq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asin(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.asin(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.asin(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.asineq = O_vec3.prototype.math_asineq
+    
+    
+
+    O_vec3.prototype.math_asinheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asinh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.asinh(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.asinh(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.asinheq = O_vec3.prototype.math_asinheq
+    
+    
+
+    O_vec3.prototype.math_ataneq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atan(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.atan(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.atan(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.ataneq = O_vec3.prototype.math_ataneq
+    
+    
+
+    O_vec3.prototype.math_atanheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atanh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.atanh(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.atanh(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.atanheq = O_vec3.prototype.math_atanheq
+    
+    
+
+    O_vec3.prototype.math_ceileq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.ceil(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.ceil(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.ceil(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.ceileq = O_vec3.prototype.math_ceileq
+    
+    
+
+    O_vec3.prototype.math_cbrteq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cbrt(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cbrt(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.cbrt(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.cbrteq = O_vec3.prototype.math_cbrteq
+    
+    
+
+    O_vec3.prototype.math_expm1eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.expm1(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.expm1(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.expm1(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.expm1eq = O_vec3.prototype.math_expm1eq
+    
+    
+
+    O_vec3.prototype.math_clz32eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.clz32(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.clz32(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.clz32(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.clz32eq = O_vec3.prototype.math_clz32eq
+    
+    
+
+    O_vec3.prototype.math_coseq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cos(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cos(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.cos(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.coseq = O_vec3.prototype.math_coseq
+    
+    
+
+    O_vec3.prototype.math_cosheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cosh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cosh(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.cosh(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.cosheq = O_vec3.prototype.math_cosheq
+    
+    
+
+    O_vec3.prototype.math_expeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.exp(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.exp(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.exp(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.expeq = O_vec3.prototype.math_expeq
+    
+    
+
+    O_vec3.prototype.math_flooreq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.floor(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.floor(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.floor(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.flooreq = O_vec3.prototype.math_flooreq
+    
+    
+
+    O_vec3.prototype.math_froundeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.fround(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.fround(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.fround(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.froundeq = O_vec3.prototype.math_froundeq
+    
+    
+
+    O_vec3.prototype.math_logeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.logeq = O_vec3.prototype.math_logeq
+    
+    
+
+    O_vec3.prototype.math_log1peq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log1p(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log1p(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log1p(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.log1peq = O_vec3.prototype.math_log1peq
+    
+    
+
+    O_vec3.prototype.math_log2eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log2(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log2(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log2(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.log2eq = O_vec3.prototype.math_log2eq
+    
+    
+
+    O_vec3.prototype.math_log10eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log10(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log10(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log10(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.log10eq = O_vec3.prototype.math_log10eq
+    
+    
+
+    O_vec3.prototype.math_roundeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.round(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.round(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.round(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.roundeq = O_vec3.prototype.math_roundeq
+    
+    
+
+    O_vec3.prototype.math_signeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sign(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sign(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sign(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.signeq = O_vec3.prototype.math_signeq
+    
+    
+
+    O_vec3.prototype.math_sineq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sin(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sin(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sin(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.sineq = O_vec3.prototype.math_sineq
+    
+    
+
+    O_vec3.prototype.math_sinheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sinh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sinh(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sinh(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.sinheq = O_vec3.prototype.math_sinheq
+    
+    
+
+    O_vec3.prototype.math_sqrteq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sqrt(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sqrt(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sqrt(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.sqrteq = O_vec3.prototype.math_sqrteq
+    
+    
+
+    O_vec3.prototype.math_taneq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tan(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.tan(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.tan(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.taneq = O_vec3.prototype.math_taneq
+    
+    
+
+    O_vec3.prototype.math_tanheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tanh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.tanh(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.tanh(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.tanheq = O_vec3.prototype.math_tanheq
+    
+    
+
+    O_vec3.prototype.math_trunceq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.trunc(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.trunc(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.trunc(this.n_z): this.n_z
+                        return this
+                    
+        }
+
+        
+    O_vec3.prototype.trunceq = O_vec3.prototype.math_trunceq
     
     
 
@@ -3543,6 +6315,454 @@ get wwww(){
 }
 O_vec4.n_tau = Math.PI * 2
 
+    O_vec4.prototype.math_abs = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.abs(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.abs(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.abs(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.abs = O_vec4.prototype.math_abs
+    
+    
+
+    O_vec4.prototype.math_acos = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acos(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.acos(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.acos(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.acos(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.acos = O_vec4.prototype.math_acos
+    
+    
+
+    O_vec4.prototype.math_acosh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acosh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.acosh(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.acosh(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.acosh(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.acosh = O_vec4.prototype.math_acosh
+    
+    
+
+    O_vec4.prototype.math_asin = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asin(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.asin(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.asin(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.asin(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.asin = O_vec4.prototype.math_asin
+    
+    
+
+    O_vec4.prototype.math_asinh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asinh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.asinh(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.asinh(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.asinh(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.asinh = O_vec4.prototype.math_asinh
+    
+    
+
+    O_vec4.prototype.math_atan = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atan(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.atan(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.atan(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.atan(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.atan = O_vec4.prototype.math_atan
+    
+    
+
+    O_vec4.prototype.math_atanh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atanh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.atanh(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.atanh(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.atanh(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.atanh = O_vec4.prototype.math_atanh
+    
+    
+
+    O_vec4.prototype.math_ceil = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.ceil(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.ceil(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.ceil(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.ceil(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.ceil = O_vec4.prototype.math_ceil
+    
+    
+
+    O_vec4.prototype.math_cbrt = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cbrt(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cbrt(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.cbrt(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.cbrt(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.cbrt = O_vec4.prototype.math_cbrt
+    
+    
+
+    O_vec4.prototype.math_expm1 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.expm1(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.expm1(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.expm1(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.expm1(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.expm1 = O_vec4.prototype.math_expm1
+    
+    
+
+    O_vec4.prototype.math_clz32 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.clz32(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.clz32(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.clz32(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.clz32(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.clz32 = O_vec4.prototype.math_clz32
+    
+    
+
+    O_vec4.prototype.math_cos = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cos(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cos(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.cos(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.cos(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.cos = O_vec4.prototype.math_cos
+    
+    
+
+    O_vec4.prototype.math_cosh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cosh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cosh(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.cosh(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.cosh(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.cosh = O_vec4.prototype.math_cosh
+    
+    
+
+    O_vec4.prototype.math_exp = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.exp(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.exp(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.exp(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.exp(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.exp = O_vec4.prototype.math_exp
+    
+    
+
+    O_vec4.prototype.math_floor = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.floor(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.floor(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.floor(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.floor(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.floor = O_vec4.prototype.math_floor
+    
+    
+
+    O_vec4.prototype.math_fround = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.fround(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.fround(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.fround(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.fround(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.fround = O_vec4.prototype.math_fround
+    
+    
+
+    O_vec4.prototype.math_log = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.log(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.log = O_vec4.prototype.math_log
+    
+    
+
+    O_vec4.prototype.math_log1p = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log1p(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log1p(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log1p(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.log1p(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.log1p = O_vec4.prototype.math_log1p
+    
+    
+
+    O_vec4.prototype.math_log2 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log2(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log2(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log2(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.log2(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.log2 = O_vec4.prototype.math_log2
+    
+    
+
+    O_vec4.prototype.math_log10 = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log10(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log10(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log10(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.log10(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.log10 = O_vec4.prototype.math_log10
+    
+    
+
+    O_vec4.prototype.math_round = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.round(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.round(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.round(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.round(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.round = O_vec4.prototype.math_round
+    
+    
+
+    O_vec4.prototype.math_sign = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sign(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sign(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sign(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.sign(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.sign = O_vec4.prototype.math_sign
+    
+    
+
+    O_vec4.prototype.math_sin = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sin(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sin(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sin(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.sin(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.sin = O_vec4.prototype.math_sin
+    
+    
+
+    O_vec4.prototype.math_sinh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sinh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sinh(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sinh(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.sinh(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.sinh = O_vec4.prototype.math_sinh
+    
+    
+
+    O_vec4.prototype.math_sqrt = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sqrt(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sqrt(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sqrt(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.sqrt(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.sqrt = O_vec4.prototype.math_sqrt
+    
+    
+
+    O_vec4.prototype.math_tan = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tan(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.tan(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.tan(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.tan(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.tan = O_vec4.prototype.math_tan
+    
+    
+
+    O_vec4.prototype.math_tanh = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tanh(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.tanh(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.tanh(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.tanh(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.tanh = O_vec4.prototype.math_tanh
+    
+    
+
+    O_vec4.prototype.math_trunc = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            return new O_vec4(
+                        (b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.trunc(this.n_x): this.n_x,(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.trunc(this.n_y): this.n_y,(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.trunc(this.n_z): this.n_z,(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.trunc(this.n_w): this.n_w
+                    )
+        }
+
+        
+    O_vec4.prototype.trunc = O_vec4.prototype.math_trunc
+    
+    
+
     O_vec4.prototype.comps_to_int = 
         function(){
             
@@ -3755,6 +6975,482 @@ O_vec4.n_tau = Math.PI * 2
 
         
     O_vec4.prototype.wrap_minmax = O_vec4.prototype.wrap
+    
+    
+
+    O_vec4.prototype.math_abseq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.abs(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.abs(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.abs(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.abs(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.abseq = O_vec4.prototype.math_abseq
+    
+    
+
+    O_vec4.prototype.math_acoseq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acos(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.acos(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.acos(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.acos(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.acoseq = O_vec4.prototype.math_acoseq
+    
+    
+
+    O_vec4.prototype.math_acosheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.acosh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.acosh(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.acosh(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.acosh(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.acosheq = O_vec4.prototype.math_acosheq
+    
+    
+
+    O_vec4.prototype.math_asineq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asin(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.asin(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.asin(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.asin(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.asineq = O_vec4.prototype.math_asineq
+    
+    
+
+    O_vec4.prototype.math_asinheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.asinh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.asinh(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.asinh(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.asinh(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.asinheq = O_vec4.prototype.math_asinheq
+    
+    
+
+    O_vec4.prototype.math_ataneq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atan(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.atan(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.atan(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.atan(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.ataneq = O_vec4.prototype.math_ataneq
+    
+    
+
+    O_vec4.prototype.math_atanheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.atanh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.atanh(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.atanh(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.atanh(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.atanheq = O_vec4.prototype.math_atanheq
+    
+    
+
+    O_vec4.prototype.math_ceileq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.ceil(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.ceil(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.ceil(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.ceil(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.ceileq = O_vec4.prototype.math_ceileq
+    
+    
+
+    O_vec4.prototype.math_cbrteq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cbrt(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cbrt(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.cbrt(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.cbrt(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.cbrteq = O_vec4.prototype.math_cbrteq
+    
+    
+
+    O_vec4.prototype.math_expm1eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.expm1(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.expm1(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.expm1(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.expm1(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.expm1eq = O_vec4.prototype.math_expm1eq
+    
+    
+
+    O_vec4.prototype.math_clz32eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.clz32(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.clz32(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.clz32(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.clz32(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.clz32eq = O_vec4.prototype.math_clz32eq
+    
+    
+
+    O_vec4.prototype.math_coseq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cos(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cos(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.cos(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.cos(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.coseq = O_vec4.prototype.math_coseq
+    
+    
+
+    O_vec4.prototype.math_cosheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.cosh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.cosh(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.cosh(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.cosh(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.cosheq = O_vec4.prototype.math_cosheq
+    
+    
+
+    O_vec4.prototype.math_expeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.exp(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.exp(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.exp(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.exp(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.expeq = O_vec4.prototype.math_expeq
+    
+    
+
+    O_vec4.prototype.math_flooreq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.floor(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.floor(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.floor(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.floor(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.flooreq = O_vec4.prototype.math_flooreq
+    
+    
+
+    O_vec4.prototype.math_froundeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.fround(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.fround(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.fround(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.fround(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.froundeq = O_vec4.prototype.math_froundeq
+    
+    
+
+    O_vec4.prototype.math_logeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.log(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.logeq = O_vec4.prototype.math_logeq
+    
+    
+
+    O_vec4.prototype.math_log1peq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log1p(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log1p(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log1p(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.log1p(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.log1peq = O_vec4.prototype.math_log1peq
+    
+    
+
+    O_vec4.prototype.math_log2eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log2(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log2(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log2(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.log2(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.log2eq = O_vec4.prototype.math_log2eq
+    
+    
+
+    O_vec4.prototype.math_log10eq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.log10(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.log10(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.log10(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.log10(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.log10eq = O_vec4.prototype.math_log10eq
+    
+    
+
+    O_vec4.prototype.math_roundeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.round(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.round(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.round(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.round(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.roundeq = O_vec4.prototype.math_roundeq
+    
+    
+
+    O_vec4.prototype.math_signeq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sign(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sign(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sign(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.sign(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.signeq = O_vec4.prototype.math_signeq
+    
+    
+
+    O_vec4.prototype.math_sineq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sin(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sin(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sin(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.sin(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.sineq = O_vec4.prototype.math_sineq
+    
+    
+
+    O_vec4.prototype.math_sinheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sinh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sinh(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sinh(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.sinh(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.sinheq = O_vec4.prototype.math_sinheq
+    
+    
+
+    O_vec4.prototype.math_sqrteq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.sqrt(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.sqrt(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.sqrt(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.sqrt(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.sqrteq = O_vec4.prototype.math_sqrteq
+    
+    
+
+    O_vec4.prototype.math_taneq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tan(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.tan(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.tan(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.tan(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.taneq = O_vec4.prototype.math_taneq
+    
+    
+
+    O_vec4.prototype.math_tanheq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.tanh(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.tanh(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.tanh(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.tanh(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.tanheq = O_vec4.prototype.math_tanheq
+    
+    
+
+    O_vec4.prototype.math_trunceq = 
+        function(){
+            
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            
+            
+                        this.n_x=(b_all || a_v_arg?.some(v=>["n_x","x","0"].includes(v))) ? Math.trunc(this.n_x): this.n_x;this.n_y=(b_all || a_v_arg?.some(v=>["n_y","y","1"].includes(v))) ? Math.trunc(this.n_y): this.n_y;this.n_z=(b_all || a_v_arg?.some(v=>["n_z","z","2"].includes(v))) ? Math.trunc(this.n_z): this.n_z;this.n_w=(b_all || a_v_arg?.some(v=>["n_w","w","3"].includes(v))) ? Math.trunc(this.n_w): this.n_w
+                        return this
+                    
+        }
+
+        
+    O_vec4.prototype.trunceq = O_vec4.prototype.math_trunceq
     
     
 

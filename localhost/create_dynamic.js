@@ -71,6 +71,35 @@ let a_o_vec_function = [
     ...[false, true].map(
         b =>{
             return [
+                // js math. functions that require only one argument
+                ...Object.getOwnPropertyNames(Math).map(s=>{
+
+                    if(typeof Math[s] === 'function' && Math[s].length === 1){
+                        return s;
+                    }
+                }).filter(v=>v).map(
+                    s=>{
+                        return [
+                            [`math_${s}`, s], 
+                            (o_vec_class)=>{return ''},
+                            (o_vec_class)=>{return `
+                            let b_all = arguments.length == 0
+                            let a_v_arg = Array.from(arguments);
+                            `},
+                            (o_vec_class) => {
+                                return o_vec_class.a_a_s_name_component.map(
+                                    a_s_name_component =>{
+                                        return [
+                                            `this.${a_s_name_component[0]}`, 
+                                            `(b_all || a_v_arg?.some(v=>${JSON.stringify(a_s_name_component)}.includes(v))) ? Math.${s}(this.${a_s_name_component[0]}): this.${a_s_name_component[0]}`
+                                        ] 
+                                    }
+                                )
+                            },
+        
+                        ]
+                    }
+                ),
                 [
                     ['comps_to_int', 'to_int'], 
                     (o_vec_class)=>{return ''},
