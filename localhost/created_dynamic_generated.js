@@ -1380,43 +1380,43 @@ O_vec1.n_tau = Math.PI * 2
     
     
 
-    O_vec1.prototype.compsadd = 
+    O_vec1.prototype.f_n_sum_comps = 
                         function(){
                             return 0
                             + this.n_x
                         }
                     
-    
+    O_vec1.prototype.compsadd = O_vec1.prototype.f_n_sum_comps
     
     
 
-    O_vec1.prototype.compssub = 
+    O_vec1.prototype.f_n_diff_comps = 
                         function(){
                             return 0
                             - this.n_x
                         }
                     
-    
+    O_vec1.prototype.compssub = O_vec1.prototype.f_n_diff_comps
     
     
 
-    O_vec1.prototype.compsmul = 
+    O_vec1.prototype.f_n_prod_comps = 
                         function(){
                             return 1
                             * this.n_x
                         }
                     
-    
+    O_vec1.prototype.compsmul = O_vec1.prototype.f_n_prod_comps
     
     
 
-    O_vec1.prototype.compsdiv = 
+    O_vec1.prototype.f_n_quot_comps = 
                         function(){
                             return 1
                             / this.n_x
                         }
                     
-    
+    O_vec1.prototype.compsdiv = O_vec1.prototype.f_n_quot_comps
     
     
 
@@ -2974,47 +2974,47 @@ parseInt(n_idx / parseInt(this.n_x))
     
     
 
-    O_vec2.prototype.compsadd = 
+    O_vec2.prototype.f_n_sum_comps = 
                         function(){
                             return 0
                             + this.n_x
 + this.n_y
                         }
                     
-    
+    O_vec2.prototype.compsadd = O_vec2.prototype.f_n_sum_comps
     
     
 
-    O_vec2.prototype.compssub = 
+    O_vec2.prototype.f_n_diff_comps = 
                         function(){
                             return 0
                             - this.n_x
 - this.n_y
                         }
                     
-    
+    O_vec2.prototype.compssub = O_vec2.prototype.f_n_diff_comps
     
     
 
-    O_vec2.prototype.compsmul = 
+    O_vec2.prototype.f_n_prod_comps = 
                         function(){
                             return 1
                             * this.n_x
 * this.n_y
                         }
                     
-    
+    O_vec2.prototype.compsmul = O_vec2.prototype.f_n_prod_comps
     
     
 
-    O_vec2.prototype.compsdiv = 
+    O_vec2.prototype.f_n_quot_comps = 
                         function(){
                             return 1
                             / this.n_x
 / this.n_y
                         }
                     
-    
+    O_vec2.prototype.compsdiv = O_vec2.prototype.f_n_quot_comps
     
     
 
@@ -4755,7 +4755,7 @@ parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y))
     
     
 
-    O_vec3.prototype.compsadd = 
+    O_vec3.prototype.f_n_sum_comps = 
                         function(){
                             return 0
                             + this.n_x
@@ -4763,11 +4763,11 @@ parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y))
 + this.n_z
                         }
                     
-    
+    O_vec3.prototype.compsadd = O_vec3.prototype.f_n_sum_comps
     
     
 
-    O_vec3.prototype.compssub = 
+    O_vec3.prototype.f_n_diff_comps = 
                         function(){
                             return 0
                             - this.n_x
@@ -4775,11 +4775,11 @@ parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y))
 - this.n_z
                         }
                     
-    
+    O_vec3.prototype.compssub = O_vec3.prototype.f_n_diff_comps
     
     
 
-    O_vec3.prototype.compsmul = 
+    O_vec3.prototype.f_n_prod_comps = 
                         function(){
                             return 1
                             * this.n_x
@@ -4787,11 +4787,11 @@ parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y))
 * this.n_z
                         }
                     
-    
+    O_vec3.prototype.compsmul = O_vec3.prototype.f_n_prod_comps
     
     
 
-    O_vec3.prototype.compsdiv = 
+    O_vec3.prototype.f_n_quot_comps = 
                         function(){
                             return 1
                             / this.n_x
@@ -4799,7 +4799,7 @@ parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y))
 / this.n_z
                         }
                     
-    
+    O_vec3.prototype.compsdiv = O_vec3.prototype.f_n_quot_comps
     
     
 
@@ -7713,7 +7713,7 @@ parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y) * parseInt(this.n_z))
     
     
 
-    O_vec4.prototype.compsadd = 
+    O_vec4.prototype.f_n_sum_comps = 
                         function(){
                             return 0
                             + this.n_x
@@ -7722,11 +7722,11 @@ parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y) * parseInt(this.n_z))
 + this.n_w
                         }
                     
-    
+    O_vec4.prototype.compsadd = O_vec4.prototype.f_n_sum_comps
     
     
 
-    O_vec4.prototype.compssub = 
+    O_vec4.prototype.f_n_diff_comps = 
                         function(){
                             return 0
                             - this.n_x
@@ -7735,11 +7735,11 @@ parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y) * parseInt(this.n_z))
 - this.n_w
                         }
                     
-    
+    O_vec4.prototype.compssub = O_vec4.prototype.f_n_diff_comps
     
     
 
-    O_vec4.prototype.compsmul = 
+    O_vec4.prototype.f_n_prod_comps = 
                         function(){
                             return 1
                             * this.n_x
@@ -7748,11 +7748,11 @@ parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y) * parseInt(this.n_z))
 * this.n_w
                         }
                     
-    
+    O_vec4.prototype.compsmul = O_vec4.prototype.f_n_prod_comps
     
     
 
-    O_vec4.prototype.compsdiv = 
+    O_vec4.prototype.f_n_quot_comps = 
                         function(){
                             return 1
                             / this.n_x
@@ -7761,7 +7761,7 @@ parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y) * parseInt(this.n_z))
 / this.n_w
                         }
                     
-    
+    O_vec4.prototype.compsdiv = O_vec4.prototype.f_n_quot_comps
     
     
 

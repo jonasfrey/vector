@@ -346,11 +346,10 @@ let a_o_vec_function = [
         } 
     ),
     ...[
-        {a_s_name: ['compsadd' ], s_operator: '+', n_start:0},
-        {a_s_name: ['compssub' ], s_operator: '-', n_start:0},
-        {a_s_name: ['compsmul' ], s_operator: '*', n_start:1},
-        {a_s_name: ['compsdiv' ], s_operator: '/', n_start:1},
-
+        {a_s_name: ['f_n_sum_comps','compsadd' ], s_operator: '+', n_start:0},
+        {a_s_name: ['f_n_diff_comps','compssub' ], s_operator: '-', n_start:0},
+        {a_s_name: ['f_n_prod_comps','compsmul' ], s_operator: '*', n_start:1},
+        {a_s_name: ['f_n_quot_comps','compsdiv' ], s_operator: '/', n_start:1},
     ].map(
         o=>{
             return new O_vec_funtion(
