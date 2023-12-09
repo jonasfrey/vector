@@ -1354,7 +1354,7 @@ O_vec1.n_tau = Math.PI * 2
     
     
 
-    O_vec1.prototype.to_index = 
+    O_vec1.prototype.f_n_idx__from_o_scl = 
             function(o_scl){
                 return (
                 (parseInt(this.n_x) % parseInt(o_scl.n_x))
@@ -1362,11 +1362,12 @@ O_vec1.n_tau = Math.PI * 2
             }
 
             
-    O_vec1.prototype.to_idx = O_vec1.prototype.to_index
+    O_vec1.prototype.to_index = O_vec1.prototype.f_n_idx__from_o_scl
+O_vec1.prototype.to_idx = O_vec1.prototype.f_n_idx__from_o_scl
     
     
 
-    O_vec1.prototype.from_index = 
+    O_vec1.prototype.f_o_trn__from_n_idx = 
             function(n_idx){
                 n_idx = parseInt(n_idx)
 
@@ -1376,7 +1377,8 @@ O_vec1.n_tau = Math.PI * 2
             }
 
             
-    O_vec1.prototype.from_idx = O_vec1.prototype.from_index
+    O_vec1.prototype.from_index = O_vec1.prototype.f_o_trn__from_n_idx
+O_vec1.prototype.from_idx = O_vec1.prototype.f_o_trn__from_n_idx
     
     
 
@@ -2946,7 +2948,7 @@ O_vec2.n_tau = Math.PI * 2
     
     
 
-    O_vec2.prototype.to_index = 
+    O_vec2.prototype.f_n_idx__from_o_scl = 
             function(o_scl){
                 return (
                 (parseInt(this.n_x) % parseInt(o_scl.n_x))
@@ -2955,11 +2957,12 @@ O_vec2.n_tau = Math.PI * 2
             }
 
             
-    O_vec2.prototype.to_idx = O_vec2.prototype.to_index
+    O_vec2.prototype.to_index = O_vec2.prototype.f_n_idx__from_o_scl
+O_vec2.prototype.to_idx = O_vec2.prototype.f_n_idx__from_o_scl
     
     
 
-    O_vec2.prototype.from_index = 
+    O_vec2.prototype.f_o_trn__from_n_idx = 
             function(n_idx){
                 n_idx = parseInt(n_idx)
 
@@ -2970,7 +2973,8 @@ parseInt(n_idx / parseInt(this.n_x))
             }
 
             
-    O_vec2.prototype.from_idx = O_vec2.prototype.from_index
+    O_vec2.prototype.from_index = O_vec2.prototype.f_o_trn__from_n_idx
+O_vec2.prototype.from_idx = O_vec2.prototype.f_o_trn__from_n_idx
     
     
 
@@ -4725,7 +4729,7 @@ O_vec3.n_tau = Math.PI * 2
     
     
 
-    O_vec3.prototype.to_index = 
+    O_vec3.prototype.f_n_idx__from_o_scl = 
             function(o_scl){
                 return (
                 (parseInt(this.n_x) % parseInt(o_scl.n_x))
@@ -4735,11 +4739,12 @@ O_vec3.n_tau = Math.PI * 2
             }
 
             
-    O_vec3.prototype.to_idx = O_vec3.prototype.to_index
+    O_vec3.prototype.to_index = O_vec3.prototype.f_n_idx__from_o_scl
+O_vec3.prototype.to_idx = O_vec3.prototype.f_n_idx__from_o_scl
     
     
 
-    O_vec3.prototype.from_index = 
+    O_vec3.prototype.f_o_trn__from_n_idx = 
             function(n_idx){
                 n_idx = parseInt(n_idx)
 
@@ -4751,7 +4756,8 @@ parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y))
             }
 
             
-    O_vec3.prototype.from_idx = O_vec3.prototype.from_index
+    O_vec3.prototype.from_index = O_vec3.prototype.f_o_trn__from_n_idx
+O_vec3.prototype.from_idx = O_vec3.prototype.f_o_trn__from_n_idx
     
     
 
@@ -7681,7 +7687,7 @@ O_vec4.n_tau = Math.PI * 2
     
     
 
-    O_vec4.prototype.to_index = 
+    O_vec4.prototype.f_n_idx__from_o_scl = 
             function(o_scl){
                 return (
                 (parseInt(this.n_x) % parseInt(o_scl.n_x))
@@ -7692,11 +7698,12 @@ O_vec4.n_tau = Math.PI * 2
             }
 
             
-    O_vec4.prototype.to_idx = O_vec4.prototype.to_index
+    O_vec4.prototype.to_index = O_vec4.prototype.f_n_idx__from_o_scl
+O_vec4.prototype.to_idx = O_vec4.prototype.f_n_idx__from_o_scl
     
     
 
-    O_vec4.prototype.from_index = 
+    O_vec4.prototype.f_o_trn__from_n_idx = 
             function(n_idx){
                 n_idx = parseInt(n_idx)
 
@@ -7709,7 +7716,8 @@ parseInt(n_idx / parseInt(this.n_x) * parseInt(this.n_y) * parseInt(this.n_z))
             }
 
             
-    O_vec4.prototype.from_idx = O_vec4.prototype.from_index
+    O_vec4.prototype.from_index = O_vec4.prototype.f_o_trn__from_n_idx
+O_vec4.prototype.from_idx = O_vec4.prototype.f_o_trn__from_n_idx
     
     
 

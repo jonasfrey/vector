@@ -306,7 +306,7 @@ let a_o_vec_function = [
 
 
     new O_vec_funtion(
-        ['to_index', 'to_idx'], 
+        ['f_n_idx__from_o_scl', 'to_index', 'to_idx'], 
         function(o_vec_class){
             let a_a_s = o_vec_class.a_a_s_name_component
             return `
@@ -325,7 +325,7 @@ let a_o_vec_function = [
         } 
     ),
     new O_vec_funtion(
-        ['from_index', 'from_idx'], 
+        ['f_o_trn__from_n_idx', 'from_index', 'from_idx'], 
         function(o_vec_class){
             let a_a_s = o_vec_class.a_a_s_name_component
             return `

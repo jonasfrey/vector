@@ -395,7 +395,7 @@ await f_deno_test_all_and_print_summary(
 
         }),
         
-        f_deno_test("to_index", () => {
+        f_deno_test("f_n_idx__from_o_scl", () => {
             //readme.md:start
             //md: ### convert a vector to a one dimensional index
 
@@ -408,7 +408,7 @@ await f_deno_test_all_and_print_summary(
             //   ^
             //   Y
             f_assert_equals(
-                new O_vec2(1.1234,2.9234).to_index(
+                new O_vec2(1.1234,2.9234).f_n_idx__from_o_scl(
                     new O_vec2(4,3)
                 ),
                 9
@@ -417,7 +417,7 @@ await f_deno_test_all_and_print_summary(
             //readme.md:end
 
         }),
-        f_deno_test("from_index", () => {
+        f_deno_test("f_o_trn__from_n_idx", () => {
             //readme.md:start
             //md: ### convert a vector to a one dimensional index
 
@@ -431,7 +431,7 @@ await f_deno_test_all_and_print_summary(
             //   Y
             let o_scl = new O_vec2(4,3);
             f_assert_equals(
-                o_scl.from_index(11),
+                o_scl.f_o_trn__from_n_idx(11),
                 new O_vec2(3,2)// this is the resulting translation o_trn
             );
             //readme.md:end
