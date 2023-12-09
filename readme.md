@@ -1,4 +1,4 @@
-<!-- {"s_msg":"this file was automatically generated","s_by":"f_generate_markdown.module.js","s_ts_created":"Sat Dec 02 2023 22:39:15 GMT+0100 (Central European Standard Time)","n_ts_created":1701553155507} -->
+<!-- {"s_msg":"this file was automatically generated","s_by":"f_generate_markdown.module.js","s_ts_created":"Sat Dec 09 2023 22:32:35 GMT+0100 (Central European Standard Time)","n_ts_created":1702157555213} -->
 ![f_o_vec logo](./f_o_vec_library.png)
 # f_o_vec
 this is a small library that handles vectors in javascript, at least as good as it can be done UwU
@@ -246,13 +246,13 @@ unfortunately there is no pythagorean quituple
 ```
 ### components operated on each other
 ```javascript
-            var n = new O_vec3(1,2,3).compsadd()
+            var n = new O_vec3(1,2,3).f_n_sum_comps()
             f_assert_equals(n,6)//`1+2+3
-            var n = new O_vec3(1,2,3).compssub()
+            var n = new O_vec3(1,2,3).f_n_diff_comps()
             f_assert_equals(n,-6)//`-1-2-3
-            var n = new O_vec3(1,2,3).compsmul()
+            var n = new O_vec3(1,2,3).f_n_prod_comps()
             f_assert_equals(n,6)//`1*2*3
-            var n = new O_vec3(1,2,3).compsdiv()
+            var n = new O_vec3(1,2,3).f_n_quot_comps()
             f_assert_equals(n,0.16666666666666666)//`(1/2)/3
 ```
 ### dot / dot product
@@ -343,7 +343,7 @@ unfortunately there is no pythagorean quituple
             //   ^
             //   Y
             f_assert_equals(
-                new O_vec2(1.1234,2.9234).to_index(
+                new O_vec2(1.1234,2.9234).f_n_idx__from_o_scl(
                     new O_vec2(4,3)
                 ),
                 9
@@ -363,7 +363,7 @@ unfortunately there is no pythagorean quituple
             //   Y
             let o_scl = new O_vec2(4,3);
             f_assert_equals(
-                o_scl.from_index(11),
+                o_scl.f_o_trn__from_n_idx(11),
                 new O_vec2(3,2)// this is the resulting translation o_trn
             );
 ```
